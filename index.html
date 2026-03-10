@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--
+  =====================================================================
+  TOOTHCARE — Premium Dental Hospital · California
+  Accessibility QA Checklist:
+  ✓ Keyboard navigation: tab order, enter/space activates, arrows for slider, ESC for modal
+  ✓ Focus visible for all interactive elements
+  ✓ All images have descriptive alt text
+  ✓ Color contrast meets WCAG AA
+  ✓ ARIA roles/states (aria-hidden, aria-expanded, aria-modal, aria-live)
+  ✓ prefers-reduced-motion respected
+  ✓ Screen reader landmarks, headings, and live regions present
+  =====================================================================
+
+  Integration Checklist:
+  - Replace hero & gallery placeholder images with licensed/consented photos
+  - Replace JSON-LD address & phone placeholders with real data
+  - Integrate booking provider (NexHealth, Zocdoc) or replace form action
+  - Add analytics/GTM after legal/HIPAA review
+  - Serve over HTTPS; add server-side validation and rate limiting
+  - Minify CSS/JS for production; move critical CSS to <head>
+  =====================================================================
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TOOTHCARE — Luxury Dental Hospital in California | Cosmetic &amp; General Dentistry</title>
+  <meta name="description"
+    content="TOOTHCARE is California's premier cosmetic and general dental hospital. State-of-the-art care, natural results, and luxury comfort. Book your appointment today.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TOOTHCARE — Luxury Dental Hospital in California">
+  <meta property="og:description"
+    content="State-of-the-art cosmetic and general dentistry with a luxury patient experience. Book your visit today.">
+  <meta property="og:image" content="images/hero.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://toothcare.example.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Preload hero image for LCP -->
+  <link rel="preload" as="image" href="images/hero.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "TOOTHCARE — Premium Dental Hospital",
+    "description": "California's premier cosmetic and general dental hospital with luxury patient experience.",
+    "url": "https://toothcare.example.com",
+    "telephone": "+1-000-000-0000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Smile Avenue, Suite 100",
+      "addressLocality": "Los Angeles",
+      "addressRegion": "CA",
+      "postalCode": "90001",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "12000"
+    },
+    "sameAs": [
+      "https://facebook.com/toothcare",
+      "https://instagram.com/toothcare",
+      "https://twitter.com/toothcare"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Skip Link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ═══════════════ HEADER ═══════════════ -->
+  <header id="site-header" class="header">
+    <div class="header-inner">
+      <a id="logo" class="logo" href="/" aria-label="TOOTHCARE home">TOOTH<span>CARE</span></a>
+
+      <nav id="primary-nav" class="nav" role="navigation" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Smile Gallery</a></li>
+          <li><a href="#doctors">Doctors</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary mobile-book-btn book-trigger" href="#booking">Book Appointment</a>
+      </nav>
+
+      <a id="book-btn" class="btn btn-primary book-trigger" href="#booking" role="button">Book Appointment</a>
+
+      <button id="mobile-menu-toggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"
+        aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════ MAIN ═══════════════ -->
+  <main id="main">
+
+    <!-- ─── Hero ─── -->
+    <section id="hero" class="hero" role="region" aria-label="Hero">
+
+      <div class="hero-content">
+        <span class="section-label reveal">Premium Dental Care</span>
+        <h1 class="reveal reveal-d1">California's Premier <em>Cosmetic Dentistry</em></h1>
+        <p class="lead reveal reveal-d2">State-of-the-art care, natural results — gentle, expert dentistry for the whole
+          family.</p>
+
+        <div class="hero-ctas reveal reveal-d3">
+          <button id="hero-book" class="btn btn-primary btn-lg book-trigger">Book Appointment</button>
+          <a class="btn btn-ghost btn-lg" href="#services">View Services</a>
+        </div>
+
+        <div class="hero-trust reveal reveal-d4">
+          <span class="hero-stars" aria-hidden="true">★★★★★</span>
+          <span class="hero-trust-text">4.9 Google rating · 12k+ Reviews</span>
+        </div>
+      </div>
+
+      <!-- Right-aligned Hero Image (Split Layout) -->
+      <div class="hero-bg">
+        <picture>
+          <img src="images/HOME PAGE.png"
+            alt="Dentist treating a patient in a modern, bright, white dental clinic with advanced equipment"
+            width="1920" height="1080" fetchpriority="high">
+        </picture>
+      </div>
+
+      <!-- Decorative shapes -->
+      <div class="hero-shape hero-shape--1" aria-hidden="true"></div>
+      <div class="hero-shape hero-shape--2" aria-hidden="true"></div>
+      <div class="hero-shape hero-shape--3" aria-hidden="true"></div>
+    </section>
+
+    <!-- ─── Trust Bar ─── -->
+    <div id="trust-bar" class="trust-bar" role="complementary" aria-label="Trust credentials">
+      <div class="container">
+        <div class="trust-bar-inner">
+          <div class="trust-item">
+            <span class="trust-icon" aria-hidden="true">🏥</span>
+            <span>ADA Accredited</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon" aria-hidden="true">🥇</span>
+            <span>Board Certified Dentists</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon" aria-hidden="true">⭐</span>
+            <span>12,000+ 5-Star Reviews</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon" aria-hidden="true">🔬</span>
+            <span>State-of-the-Art Technology</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon" aria-hidden="true">📰</span>
+            <span>As seen in Forbes &amp; Healthgrades</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── Services ─── -->
+    <section id="services" class="services section-pad" aria-labelledby="services-title">
+      <div class="container">
+        <span class="section-label reveal">What We Offer</span>
+        <h2 id="services-title" class="section-heading reveal">Our Services</h2>
+        <p class="section-intro reveal">Comprehensive dental care delivered with precision, compassion, and a commitment
+          to your comfort.</p>
+
+        <div class="services-grid">
+          <article id="service-implants" class="service-card reveal reveal-d1" role="group"
+            aria-labelledby="svc-implants-title">
+            <a class="card-link" href="#service-implants">
+              <div class="service-card-img-wrap">
+                <picture>
+                  <img src="images/dental implant.jpeg"
+                    alt="Close-up of clean dental implant on a white surface in a modern clinic" loading="lazy">
+                </picture>
+                <div class="icon" aria-hidden="true">🦷</div>
+              </div>
+              <div class="service-card-body">
+                <h3 id="svc-implants-title">Dental Implants</h3>
+                <p class="svc-desc">
+                  <strong>What it is:</strong> A permanent titanium root replacement topped with a custom porcelain
+                  crown.<br>
+                  <strong>Who it's for:</strong> Anyone missing one or more teeth who wants a natural-feeling
+                  solution.<br>
+                  <strong>Benefit:</strong> Restores chewing, speech, and confidence — built to last a lifetime.
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <article id="service-cosmetic" class="service-card reveal reveal-d2" role="group"
+            aria-labelledby="svc-cosmetic-title">
+            <a class="card-link" href="#service-cosmetic">
+              <div class="service-card-img-wrap">
+                <picture>
+                  <img src="images/Cosmetic Dentistry.jpeg"
+                    alt="Patient smiling brightly after a complete cosmetic dentistry smile makeover" loading="lazy">
+                </picture>
+                <div class="icon" aria-hidden="true">✨</div>
+              </div>
+              <div class="service-card-body">
+                <h3 id="svc-cosmetic-title">Cosmetic Dentistry</h3>
+                <p class="svc-desc">
+                  <strong>What it is:</strong> Veneers, bonding, and whitening designed to perfect your smile
+                  aesthetics.<br>
+                  <strong>Who it's for:</strong> Patients wanting a brighter, more even, magazine-ready smile.<br>
+                  <strong>Benefit:</strong> A transformation you'll notice every time you look in the mirror.
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <article id="service-orthodontics" class="service-card reveal reveal-d3" role="group"
+            aria-labelledby="svc-ortho-title">
+            <a class="card-link" href="#service-orthodontics">
+              <div class="service-card-img-wrap">
+                <picture>
+                  <img src="images/Orthodontics.jpeg"
+                    alt="Patient with clear transparent aligners for orthodontic treatment smiling" loading="lazy">
+                </picture>
+                <div class="icon" aria-hidden="true">😁</div>
+              </div>
+              <div class="service-card-body">
+                <h3 id="svc-ortho-title">Orthodontics</h3>
+                <p class="svc-desc">
+                  <strong>What it is:</strong> Clear aligners and modern braces that straighten teeth discreetly.<br>
+                  <strong>Who it's for:</strong> Teens and adults seeking a straighter, healthier bite.<br>
+                  <strong>Benefit:</strong> Improved alignment, easier cleaning, and a confident smile.
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <article id="service-restorative" class="service-card reveal reveal-d1" role="group"
+            aria-labelledby="svc-restore-title">
+            <a class="card-link" href="#service-restorative">
+              <div class="service-card-img-wrap">
+                <picture>
+                  <img src="images/Restorative Care.jpeg"
+                    alt="Restorative dental procedure utilizing modern restorative care tools" loading="lazy">
+                </picture>
+                <div class="icon" aria-hidden="true">🔧</div>
+              </div>
+              <div class="service-card-body">
+                <h3 id="svc-restore-title">Restorative Care</h3>
+                <p class="svc-desc">
+                  <strong>What it is:</strong> Crowns, bridges, and fillings that repair damage and restore full
+                  function.<br>
+                  <strong>Who it's for:</strong> Patients with decay, chipped, or weakened teeth.<br>
+                  <strong>Benefit:</strong> Eat, speak, and smile without worry — strong, natural-looking results.
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <article id="service-general" class="service-card reveal reveal-d2" role="group"
+            aria-labelledby="svc-general-title">
+            <a class="card-link" href="#service-general">
+              <div class="service-card-img-wrap">
+                <picture>
+                  <img src="images/General Dentistry.jpeg"
+                    alt="Dentist performing a checkup during a general dentistry visit" loading="lazy">
+                </picture>
+                <div class="icon" aria-hidden="true">🩺</div>
+              </div>
+              <div class="service-card-body">
+                <h3 id="svc-general-title">General Dentistry</h3>
+                <p class="svc-desc">
+                  <strong>What it is:</strong> Exams, cleanings, X-rays, and preventive treatments for whole-family oral
+                  health.<br>
+                  <strong>Who it's for:</strong> Everyone — from children to seniors, every six months.<br>
+                  <strong>Benefit:</strong> Catch problems early, maintain a healthy smile, and avoid costly treatments
+                  later.
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <article id="service-emergency" class="service-card reveal reveal-d3" role="group"
+            aria-labelledby="svc-emergency-title">
+            <a class="card-link" href="#service-emergency">
+              <div class="service-card-img-wrap">
+                <picture>
+                  <img src="images/Emergency Dental.jpeg" alt="Urgent care scene for emergency dental treatment"
+                    loading="lazy">
+                </picture>
+                <div class="icon" aria-hidden="true">🚨</div>
+              </div>
+              <div class="service-card-body">
+                <h3 id="svc-emergency-title">Emergency Dental</h3>
+                <p class="svc-desc">
+                  <strong>What it is:</strong> Same-day urgent care for toothaches, fractures, and dental trauma.<br>
+                  <strong>Who it's for:</strong> Anyone experiencing sudden dental pain or injury.<br>
+                  <strong>Benefit:</strong> Fast relief, expert diagnosis, and immediate treatment to save your smile.
+                </p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Equipment Showcase / Advanced Technology ─── -->
+    <section id="equipment" class="equipment-showcase section-pad" aria-labelledby="equipment-title">
+      <div class="container">
+        <span class="section-label reveal">Advanced Technology</span>
+        <h2 id="equipment-title" class="section-heading reveal">Precision Dental Equipment</h2>
+        <p class="section-intro reveal">State-of-the-art diagnostic and treatment technology ensuring faster, safer, and
+          more comfortable care.</p>
+
+        <div class="equipment-grid">
+          <article class="equipment-card reveal reveal-d1">
+            <div class="eq-img-wrap">
+              <picture>
+                <img src="images/3D Cone Beam Scanner.jpeg"
+                  alt="A modern 3D Cone Beam Scanner for precise dental diagnostics" loading="lazy">
+              </picture>
+            </div>
+            <div class="eq-body">
+              <h3>3D Cone Beam Scanner</h3>
+              <p>Provides highly detailed 3-D views of your teeth, jawbone, and nerve pathways for absolute precision
+                during implant placement and complex diagnostics.</p>
+            </div>
+          </article>
+
+          <article class="equipment-card reveal reveal-d2">
+            <div class="eq-img-wrap">
+              <picture>
+                <img src="images/Laser Dentistry System.jpeg"
+                  alt="Close-up of an advanced dental laser dentistry system" loading="lazy">
+              </picture>
+            </div>
+            <div class="eq-body">
+              <h3>Laser Dentistry System</h3>
+              <p>Minimally invasive technology for gum contouring, periodontal treatments, and cavity preparation.
+                Drastically reduces healing times and eliminates the need for drills.</p>
+            </div>
+          </article>
+
+          <article class="equipment-card reveal reveal-d3">
+            <div class="eq-img-wrap">
+              <picture>
+                <img src="images/Ergonomic Treatment Suites.jpeg"
+                  alt="State-of-the-art ergonomic treatment suites with modern dental chairs" loading="lazy">
+              </picture>
+            </div>
+            <div class="eq-body">
+              <h3>Ergonomic Treatment Suites</h3>
+              <p>Luxurious patient chairs featuring integrated massage functions, personalized entertainment screens,
+                and specialized lighting designed to eliminate clinical anxiety.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Why Choose / Stats ─── -->
+    <section id="why" class="why-choose section-pad" aria-labelledby="why-title">
+      <div class="container">
+        <span class="section-label reveal">Why TOOTHCARE</span>
+        <h2 id="why-title" class="section-heading reveal" style="color:#fff;">Why Patients Choose Us</h2>
+        <p class="section-intro reveal">Numbers that reflect our dedication to exceptional dental care and patient
+          satisfaction.</p>
+
+        <div class="stats-grid reveal">
+          <div class="stat-item">
+            <span class="counter" data-target="10000" data-suffix="+">0</span>
+            <span class="stat-label">Smiles Transformed</span>
+          </div>
+          <div class="stat-item">
+            <span class="counter" data-target="25" data-suffix="+">0</span>
+            <span class="stat-label">Years of Excellence</span>
+          </div>
+          <div class="stat-item">
+            <span class="counter" data-target="50" data-suffix="+">0</span>
+            <span class="stat-label">Expert Dentists</span>
+          </div>
+          <div class="stat-item">
+            <span class="counter" data-target="98" data-suffix="%">0</span>
+            <span class="stat-label">Patient Satisfaction</span>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-item reveal reveal-d1">
+            <div class="feature-icon" aria-hidden="true">🏆</div>
+            <h3>Award-Winning Care</h3>
+            <p>Recognized by the American Dental Association and named among California's top dental practices for three
+              consecutive years.</p>
+          </div>
+          <div class="feature-item reveal reveal-d2">
+            <div class="feature-icon" aria-hidden="true">🧘</div>
+            <h3>Comfort-First Approach</h3>
+            <p>Spa-like environment with noise-cancelling headphones, relaxation rooms, and gentle sedation options for
+              anxiety-free visits.</p>
+          </div>
+          <div class="feature-item reveal reveal-d3">
+            <div class="feature-icon" aria-hidden="true">🔬</div>
+            <h3>Cutting-Edge Technology</h3>
+            <p>3D imaging, laser dentistry, and AI-assisted diagnostics ensure precision results with minimal discomfort
+              and faster recovery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Doctors ─── -->
+    <section id="doctors" class="doctors section-pad" aria-labelledby="doctors-title">
+      <div class="container">
+        <span class="section-label reveal">Our Experts</span>
+        <h2 id="doctors-title" class="section-heading reveal">Meet Our Doctors</h2>
+        <p class="section-intro reveal">Board-certified, compassionate, and dedicated to clinical excellence.</p>
+
+        <div class="doctors-grid">
+          <article class="doctor reveal reveal-d1" data-doctor-id="dr-jane-doe">
+            <div class="doctor-photo-wrap">
+              <picture>
+                <source srcset="images/doctor-1.png" type="image/png">
+                <img class="doctor-photo" src="images/doctor-1.png"
+                  alt="Portrait of Dr. Jane Doe, Cosmetic &amp; Implant Specialist, actively consulting with a patient"
+                  loading="lazy" width="400" height="467">
+              </picture>
+            </div>
+            <div class="doctor-info">
+              <h4>Dr. Jane Doe</h4>
+              <p class="specialty">Cosmetic &amp; Implant Specialist</p>
+              <p class="bio">Dr. Doe brings 18 years of experience in smile design and full-arch implant restorations.
+                She trained at UCLA School of Dentistry and has a passion for creating natural, lasting results.</p>
+              <p class="creds">DDS · UCLA · 18 years</p>
+              <button class="btn btn-outline btn-sm book-with-doc book-trigger" data-doctor-id="dr-jane-doe">Schedule
+                with Dr. Doe</button>
+            </div>
+          </article>
+
+          <article class="doctor reveal reveal-d2" data-doctor-id="dr-michael-chen">
+            <div class="doctor-photo-wrap">
+              <picture>
+                <source srcset="images/doctor-2.png" type="image/png">
+                <img class="doctor-photo" src="images/doctor-2.png"
+                  alt="Portrait of Dr. Michael Chen, Prosthodontist, performing a meticulous dental procedure"
+                  loading="lazy" width="400" height="467">
+              </picture>
+            </div>
+            <div class="doctor-info">
+              <h4>Dr. Michael Chen</h4>
+              <p class="specialty">Prosthodontist &amp; Restorative Expert</p>
+              <p class="bio">With over 22 years in advanced restorative dentistry, Dr. Chen is known for his meticulous
+                approach and gentle chairside manner. He specializes in complex full-mouth reconstruction.</p>
+              <p class="creds">DDS, MSD · Stanford · 22 years</p>
+              <button class="btn btn-outline btn-sm book-with-doc book-trigger"
+                data-doctor-id="dr-michael-chen">Schedule with Dr. Chen</button>
+            </div>
+          </article>
+
+          <article class="doctor reveal reveal-d3" data-doctor-id="dr-alex-rivera">
+            <div class="doctor-photo-wrap">
+              <picture>
+                <source srcset="images/doctor-3.png" type="image/png">
+                <img class="doctor-photo" src="images/doctor-3.png"
+                  alt="Portrait of Dr. Alex Rivera, Orthodontist, smiling warmly alongside a patient in the clinic"
+                  loading="lazy" width="400" height="467">
+              </picture>
+            </div>
+            <div class="doctor-info">
+              <h4>Dr. Alex Rivera</h4>
+              <p class="specialty">Orthodontist &amp; Clear Aligner Expert</p>
+              <p class="bio">Dr. Rivera completed his orthodontic residency at USC and is one of the top Invisalign
+                providers in the state. He partners with patients to design efficient treatment plans for teens and
+                adults.</p>
+              <p class="creds">DMD · USC · 12 years</p>
+              <button class="btn btn-outline btn-sm book-with-doc book-trigger" data-doctor-id="dr-alex-rivera">Schedule
+                with Dr. Rivera</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Smile Gallery ─── -->
+    <section id="gallery" class="smile-gallery section-pad" aria-labelledby="gallery-title">
+      <div class="container">
+        <span class="section-label reveal">Real Results</span>
+        <h2 id="gallery-title" class="section-heading reveal">Smile Gallery</h2>
+        <p class="section-intro reveal">See the transformations our patients love. Every smile tells a story of
+          confidence restored.</p>
+
+        <div class="gallery-grid">
+          <figure class="case reveal reveal-d1">
+            <div class="ba-slider">
+              <img class="ba-before" src="images/smile-ba.png"
+                alt="Before dental treatment — teeth with discoloration (consented patient)" loading="lazy" width="600"
+                height="450">
+              <div class="ba-after-wrapper">
+                <img class="ba-after" src="images/smile-ba.png"
+                  alt="After dental veneers — bright, aligned smile (consented patient)" loading="lazy" width="600"
+                  height="450">
+              </div>
+              <span class="ba-label ba-label--before" aria-hidden="true">Before</span>
+              <span class="ba-label ba-label--after" aria-hidden="true">After</span>
+              <button class="ba-handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                tabindex="0" aria-label="Compare before and after — drag to reveal">
+                <span class="ba-handle-circle" aria-hidden="true">⟷</span>
+              </button>
+            </div>
+            <figcaption>Case 1 — Porcelain Veneers</figcaption>
+          </figure>
+
+          <figure class="case reveal reveal-d2">
+            <div class="ba-slider">
+              <img class="ba-before" src="images/smile-ba.png" alt="Before dental implant treatment (consented patient)"
+                loading="lazy" width="600" height="450">
+              <div class="ba-after-wrapper">
+                <img class="ba-after" src="images/smile-ba.png"
+                  alt="After dental implant — complete restored smile (consented patient)" loading="lazy" width="600"
+                  height="450">
+              </div>
+              <span class="ba-label ba-label--before" aria-hidden="true">Before</span>
+              <span class="ba-label ba-label--after" aria-hidden="true">After</span>
+              <button class="ba-handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                tabindex="0" aria-label="Compare before and after — drag to reveal">
+                <span class="ba-handle-circle" aria-hidden="true">⟷</span>
+              </button>
+            </div>
+            <figcaption>Case 2 — Full-Arch Implants</figcaption>
+          </figure>
+
+          <figure class="case reveal reveal-d3">
+            <div class="ba-slider">
+              <img class="ba-before" src="images/smile-ba.png"
+                alt="Before teeth whitening treatment (consented patient)" loading="lazy" width="600" height="450">
+              <div class="ba-after-wrapper">
+                <img class="ba-after" src="images/smile-ba.png"
+                  alt="After professional teeth whitening — brilliant white smile (consented patient)" loading="lazy"
+                  width="600" height="450">
+              </div>
+              <span class="ba-label ba-label--before" aria-hidden="true">Before</span>
+              <span class="ba-label ba-label--after" aria-hidden="true">After</span>
+              <button class="ba-handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                tabindex="0" aria-label="Compare before and after — drag to reveal">
+                <span class="ba-handle-circle" aria-hidden="true">⟷</span>
+              </button>
+            </div>
+            <figcaption>Case 3 — Professional Whitening</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Testimonials ─── -->
+    <section id="testimonials" class="testimonials section-pad" aria-roledescription="carousel"
+      aria-label="Patient testimonials">
+      <div class="container">
+        <span class="section-label reveal">Patient Stories</span>
+        <h2 class="section-heading reveal">What Our Patients Say</h2>
+        <p class="section-intro reveal">Real experiences from real smiles. Your comfort and confidence are our greatest
+          reward.</p>
+
+        <div class="carousel-viewport reveal">
+          <div class="carousel-track" role="list">
+            <div class="testimonial-slide" role="listitem" aria-hidden="false">
+              <div class="testimonial-card">
+                <div class="test-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote>"I'd been afraid of dentists my entire life, but the team at TOOTHCARE made me feel
+                  completely at ease. My new smile has genuinely changed how I carry myself every day."</blockquote>
+                <p class="test-author">Sarah M.</p>
+                <p class="test-location">Los Angeles, CA</p>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" role="listitem" aria-hidden="true">
+              <div class="testimonial-card">
+                <div class="test-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote>"From the front desk to the operating room, the experience was first-class. Dr. Chen's
+                  full-mouth work was painless, precise, and the results exceeded anything I imagined."</blockquote>
+                <p class="test-author">James T.</p>
+                <p class="test-location">San Francisco, CA</p>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" role="listitem" aria-hidden="true">
+              <div class="testimonial-card">
+                <div class="test-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote>"My Invisalign journey with Dr. Rivera was fantastic. In just 10 months, I had the straight
+                  teeth I'd dreamed about for years. The staff is so supportive and warm."</blockquote>
+                <p class="test-author">Priya K.</p>
+                <p class="test-location">San Diego, CA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-controls reveal">
+          <button class="carousel-btn carousel-btn--prev" aria-label="Previous testimonial">‹</button>
+          <div class="carousel-indicators" role="tablist" aria-label="Testimonial navigation">
+            <button class="carousel-dot active" role="tab" aria-selected="true"
+              aria-label="Show testimonial 1"></button>
+            <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Show testimonial 2"></button>
+            <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Show testimonial 3"></button>
+          </div>
+          <button class="carousel-btn carousel-btn--next" aria-label="Next testimonial">›</button>
+        </div>
+
+        <!-- Live region for screen readers -->
+        <div class="carousel-live sr-only" aria-live="polite" aria-atomic="true">Showing testimonial 1 of 3</div>
+      </div>
+    </section>
+
+    <!-- ─── Our Clinic Gallery ─── -->
+    <section id="clinic-environment" class="clinic-environment section-pad" aria-labelledby="clinic-title">
+      <div class="container container--wide">
+        <span class="section-label reveal text-center">Our Clinic</span>
+        <h2 id="clinic-title" class="section-heading reveal text-center">Designed for Your Comfort</h2>
+        <p class="section-intro reveal">Step into a calming, modern environment where every detail caters to a
+          stress-free dental experience.</p>
+
+        <div class="clinic-gallery reveal">
+          <figure class="cg-item cg-item-1">
+            <picture>
+              <img src="images/HOME PAGE.png"
+                alt="Bright and welcoming modern TOOTHCARE clinic reception area with natural light" loading="lazy">
+            </picture>
+            <figcaption class="cg-caption">Welcoming Reception Lounge</figcaption>
+          </figure>
+
+          <figure class="cg-item cg-item-2">
+            <picture>
+              <img src="images/doctor-3.png"
+                alt="Private treatment room with panoramic windows and comfortable dental chair" loading="lazy">
+            </picture>
+            <figcaption class="cg-caption">Private Treatment Suites</figcaption>
+          </figure>
+
+          <figure class="cg-item cg-item-3">
+            <picture>
+              <img src="images/blog-smile.png"
+                alt="Patient relaxing in the recovery area before departing with a beautiful smile" loading="lazy">
+            </picture>
+            <figcaption class="cg-caption">Patient Recovery Lounge</figcaption>
+          </figure>
+
+          <figure class="cg-item cg-item-4">
+            <picture>
+              <img src="images/doctor-2.png"
+                alt="High-tech clinical sterilization area maintaining impeccable hygiene standards" loading="lazy">
+            </picture>
+            <figcaption class="cg-caption">Clinical Sterilization Center</figcaption>
+          </figure>
+
+          <figure class="cg-item cg-item-5">
+            <picture>
+              <img src="images/doctor-1.png"
+                alt="Doctor consulting with a patient in a private consultation room using digital displays"
+                loading="lazy">
+            </picture>
+            <figcaption class="cg-caption">Private Consultation Rooms</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Blog Preview ─── -->
+    <section id="blog" class="blog-preview section-pad" aria-labelledby="blog-title">
+      <div class="container">
+        <span class="section-label reveal">From Our Blog</span>
+        <h2 id="blog-title" class="section-heading reveal">Latest Insights</h2>
+        <p class="section-intro reveal">Expert advice, treatment guides, and tips for a healthier, brighter smile.</p>
+
+        <div class="blog-grid">
+          <article class="blog-card reveal reveal-d1">
+            <div class="blog-card-img">
+              <img src="images/blog-smile.png" alt="Woman with a bright healthy smile after dental whitening"
+                loading="lazy" width="600" height="338">
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-tag">Cosmetic Dentistry</span>
+              <h3><a href="#blog-post-1">5 Things to Know Before Getting Veneers</a></h3>
+              <p class="blog-excerpt">Considering veneers? Here's what you should ask your dentist, how long they last,
+                and what the process actually feels like — from consultation to reveal day.</p>
+              <p class="blog-meta"><time datetime="2026-03-01">March 1, 2026</time> · 5 min read</p>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-d2">
+            <div class="blog-card-img">
+              <img src="images/Ergonomic Treatment Suites.jpeg" alt="Inside the TOOTHCARE modern dental clinic"
+                loading="lazy" width="600" height="338">
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-tag">Preventive Care</span>
+              <h3><a href="#blog-post-2">The Complete Guide to Adult Dental Cleanings</a></h3>
+              <p class="blog-excerpt">Regular cleanings do more than polish teeth. Learn how professional hygiene visits
+                detect problems early and protect your long-term health.</p>
+              <p class="blog-meta"><time datetime="2026-02-18">February 18, 2026</time> · 4 min read</p>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-d3">
+            <div class="blog-card-img">
+              <img src="images/doctor-2.png" alt="Dentist explaining an X-ray result on a monitor" loading="lazy"
+                width="600" height="338">
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-tag">Technology</span>
+              <h3><a href="#blog-post-3">How 3D Imaging Is Revolutionizing Dental Implants</a></h3>
+              <p class="blog-excerpt">Discover how cone-beam CT scans and AI-guided surgery are making implants faster,
+                safer, and more predictable than ever before.</p>
+              <p class="blog-meta"><time datetime="2026-02-05">February 5, 2026</time> · 6 min read</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA Strip ─── -->
+    <aside id="cta-strip" class="cta-strip reveal">
+      <div class="container">
+        <h2>Ready for Your Perfect Smile?</h2>
+        <p>Your journey to confidence, comfort, and a stunning smile starts with one simple step.</p>
+        <div class="cta-strip-actions">
+          <button class="btn btn-primary btn-lg book-trigger">Book Appointment</button>
+          <a class="btn btn-ghost btn-lg" href="tel:+10000000000">📞 Call Us Now</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ─── Contact Section ─── -->
+    <section id="contact" class="contact-section section-pad" aria-labelledby="contact-title">
+      <div class="container">
+        <span class="section-label reveal">Get In Touch</span>
+        <h2 id="contact-title" class="section-heading reveal">Contact Us</h2>
+        <p class="section-intro reveal">We'd love to hear from you. Reach out by phone, email, or book your visit
+          online.</p>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal reveal-d1">
+            <div class="contact-card-icon" aria-hidden="true">📞</div>
+            <h3>Phone</h3>
+            <a href="tel:+10000000000">+1 (000) 000-0000</a>
+            <p style="margin-top:8px;font-size:0.85rem;color:var(--muted);">Available Mon–Sat</p>
+          </div>
+
+          <div class="contact-card reveal reveal-d2">
+            <div class="contact-card-icon" aria-hidden="true">💬</div>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/10000000000" target="_blank" rel="noopener noreferrer">Chat with us</a>
+            <p style="margin-top:8px;font-size:0.85rem;color:var(--muted);">Quick responses 24/7</p>
+          </div>
+
+          <div class="contact-card reveal reveal-d3">
+            <div class="contact-card-icon" aria-hidden="true">✉️</div>
+            <h3>Email</h3>
+            <a href="mailto:hello@toothcare.example.com">hello@toothcare.example.com</a>
+            <p style="margin-top:8px;font-size:0.85rem;color:var(--muted);">We reply within 2 hours</p>
+          </div>
+        </div>
+
+        <div class="contact-hours reveal">
+          <h3 class="text-center" style="margin-bottom:16px;">Clinic Hours</h3>
+          <div class="hours-table">
+            <table>
+              <tbody>
+                <tr>
+                  <th>Monday – Friday</th>
+                  <td><time datetime="08:00">8:00 AM</time> – <time datetime="18:00">6:00 PM</time></td>
+                </tr>
+                <tr>
+                  <th>Saturday</th>
+                  <td><time datetime="09:00">9:00 AM</time> – <time datetime="14:00">2:00 PM</time></td>
+                </tr>
+                <tr>
+                  <th>Sunday</th>
+                  <td>Closed</td>
+                </tr>
+                <tr>
+                  <th style="color:var(--accent-coral);">Emergency</th>
+                  <td style="color:var(--accent-coral);font-weight:600;">24/7 Hotline Available</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="map-placeholder reveal" role="img" aria-label="Map showing TOOTHCARE clinic location">
+          <!-- Production: Replace with <iframe src="https://www.google.com/maps/embed?pb=...&key=YOUR_API_KEY" ... /> -->
+          📍 123 Smile Avenue, Suite 100, Los Angeles, CA 90001 · <a href="https://maps.google.com" target="_blank"
+            rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer id="site-footer" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="/" aria-label="TOOTHCARE home">TOOTH<span>CARE</span></a>
+          <p>Premium dental care meets luxury comfort. California's most trusted cosmetic and general dental hospital —
+            because your smile deserves the best.</p>
+          <div class="social-links">
+            <a class="social-link" href="https://facebook.com/toothcare" aria-label="Facebook" target="_blank"
+              rel="noopener">f</a>
+            <a class="social-link" href="https://instagram.com/toothcare" aria-label="Instagram" target="_blank"
+              rel="noopener">📸</a>
+            <a class="social-link" href="https://twitter.com/toothcare" aria-label="Twitter / X" target="_blank"
+              rel="noopener">𝕏</a>
+            <a class="social-link" href="https://youtube.com/toothcare" aria-label="YouTube" target="_blank"
+              rel="noopener">▶</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#doctors">Meet the Doctors</a></li>
+            <li><a href="#gallery">Smile Gallery</a></li>
+            <li><a href="#blog">Blog &amp; Insights</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#service-implants">Dental Implants</a></li>
+            <li><a href="#service-cosmetic">Cosmetic Dentistry</a></li>
+            <li><a href="#service-orthodontics">Orthodontics</a></li>
+            <li><a href="#service-restorative">Restorative Care</a></li>
+            <li><a href="#service-general">General Dentistry</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Stay Updated</h4>
+          <p style="font-size:0.9rem;margin-bottom:12px;">Get dental tips, special offers, and clinic news straight to
+            your inbox.</p>
+          <form class="newsletter-form" action="#" method="post" aria-label="Newsletter signup">
+            <input type="email" placeholder="Your email address" aria-label="Email address for newsletter" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 TOOTHCARE. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Accessibility Statement</a>
+          <a href="#">HIPAA Notice</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ BOOKING MODAL ═══════════════ -->
+  <div id="booking-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-title"
+    aria-describedby="modal-desc">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">Book an Appointment</h2>
+        <button class="modal-close" aria-label="Close booking dialog">✕</button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-desc">Fill in a few details and we'll confirm your visit within minutes. No obligation, no hidden
+          fees.</p>
+
+        <form id="booking-form" novalidate method="post" action="#">
+          <div class="form-group">
+            <label for="fld-service">Service Needed</label>
+            <select id="fld-service" name="service" class="form-control">
+              <option value="">Select a service…</option>
+              <option value="dental-implants">Dental Implants</option>
+              <option value="cosmetic-dentistry">Cosmetic Dentistry</option>
+              <option value="orthodontics">Orthodontics</option>
+              <option value="restorative-care">Restorative Care</option>
+              <option value="general-dentistry">General Dentistry</option>
+              <option value="teeth-whitening">Teeth Whitening</option>
+              <option value="emergency">Emergency Dental</option>
+              <option value="consultation">General Consultation</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fld-date">Preferred Date</label>
+              <input id="fld-date" type="date" name="date" class="form-control">
+              <p class="form-error" role="alert">Please select a valid future date.</p>
+            </div>
+            <div class="form-group">
+              <label for="fld-time">Preferred Time</label>
+              <input id="fld-time" type="time" name="time" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fld-name">Full Name <span aria-hidden="true" style="color:var(--accent-coral);">*</span></label>
+            <input id="fld-name" type="text" name="name" class="form-control" required autocomplete="name"
+              placeholder="e.g. Sarah Mitchell">
+            <p class="form-error" role="alert">Please enter your full name.</p>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fld-phone">Phone <span aria-hidden="true" style="color:var(--accent-coral);">*</span></label>
+              <input id="fld-phone" type="tel" name="phone" class="form-control" required
+                pattern="^\+?[0-9\s\-\(\)]{7,20}$" autocomplete="tel" placeholder="+1 555 555 5555">
+              <p class="form-error" role="alert">Please enter a valid phone number.</p>
+            </div>
+            <div class="form-group">
+              <label for="fld-email">Email <span aria-hidden="true" style="color:var(--accent-coral);">*</span></label>
+              <input id="fld-email" type="email" name="email" class="form-control" required autocomplete="email"
+                placeholder="you@example.com">
+              <p class="form-error" role="alert">Please enter a valid email.</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fld-comments">Additional Notes</label>
+            <textarea id="fld-comments" name="comments" rows="4" class="form-control"
+              placeholder="Any specific concerns or preferences?"></textarea>
+          </div>
+
+          <button id="fld-submit" type="submit" class="btn btn-primary btn-lg">Confirm Appointment Request</button>
+        </form>
+
+        <!-- Success message -->
+        <div class="form-success" aria-live="polite">
+          <div class="success-icon">✅</div>
+          <h3>Thank You!</h3>
+          <p>Your appointment request has been received. Our team will confirm your visit within 30 minutes.</p>
+          <button class="btn btn-outline" onclick="document.querySelector('.modal-close').click()"
+            style="margin-top:16px;">Close</button>
+        </div>
+
+        <!-- noscript fallback -->
+        <noscript>
+          <p style="margin-top:16px;padding:16px;background:#f9f9fb;border-radius:8px;">
+            JavaScript is required for booking. You can also
+            <a href="tel:+10000000000">call us at +1 (000) 000-0000</a> or
+            <a
+              href="mailto:hello@toothcare.example.com?subject=Appointment%20Request&body=Name:%0APhone:%0APreferred%20Date:%0AService:">email
+              your booking request</a>.
+          </p>
+        </noscript>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Mobile CTA -->
+  <div class="floating-cta">
+    <button class="btn btn-primary book-trigger">📅 Book Now</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+
+</body>
+
+</html>
