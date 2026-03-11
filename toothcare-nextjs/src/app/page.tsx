@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import GlobalBookingCTA from "@/components/GlobalBookingCTA";
 
 const services = [
   { icon: "🦷", title: "Dental Implants", desc: "Permanent titanium root replacement topped with a custom porcelain crown.", img: "/images/dental implant.jpeg", href: "/services#implants" },
@@ -62,12 +63,11 @@ export default function Home() {
               reimagined.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link
-                href="/contact"
+              <GlobalBookingCTA
                 className="bg-[var(--cta-orange)] hover:bg-[var(--cta-orange-hover)] text-white px-8 py-4 rounded-full font-semibold text-base transition-all hover:scale-105 shadow-xl min-h-[44px]"
               >
                 Book Your Visit
-              </Link>
+              </GlobalBookingCTA>
               <a
                 href="tel:+10000000000"
                 className="border-2 border-white/40 hover:border-white text-white px-8 py-4 rounded-full font-semibold text-base transition-all hover:bg-white/10 min-h-[44px]"
@@ -280,12 +280,11 @@ export default function Home() {
             with one simple step.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contact"
+            <GlobalBookingCTA
               className="bg-white text-[var(--cta-orange)] px-8 py-4 rounded-full font-bold text-base hover:shadow-xl hover:scale-105 transition-all min-h-[44px]"
             >
               Book Appointment
-            </Link>
+            </GlobalBookingCTA>
             <a
               href="tel:+10000000000"
               className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-base hover:bg-white/10 transition-all min-h-[44px]"

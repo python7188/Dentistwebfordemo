@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
+import FeaturePopup from "@/components/FeaturePopup";
 
 const playfair = Playfair_Display({
   variable: "--font-display",
@@ -59,6 +60,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <FloatingCTA />
+        <FeaturePopup />
       </body>
     </html>
   );

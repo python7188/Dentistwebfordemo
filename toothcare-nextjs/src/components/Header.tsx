@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import GlobalBookingCTA from "./GlobalBookingCTA";
 
 const navLinks = [
     { label: "Home", href: "/" },
@@ -64,12 +65,11 @@ export default function Header() {
                     >
                         📞 Call Now
                     </a>
-                    <Link
-                        href="/contact"
+                    <GlobalBookingCTA
                         className="bg-[var(--cta-orange)] hover:bg-[var(--cta-orange-hover)] text-white px-6 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105 shadow-lg min-h-[44px] flex items-center"
                     >
                         Book Appointment
-                    </Link>
+                    </GlobalBookingCTA>
                 </div>
 
                 {/* Mobile hamburger */}
@@ -117,13 +117,12 @@ export default function Header() {
                     >
                         📞 Call Now
                     </a>
-                    <Link
-                        href="/contact"
+                    <GlobalBookingCTA
                         onClick={() => setMobileOpen(false)}
                         className="bg-[var(--cta-orange)] text-white text-center py-4 rounded-xl font-semibold text-base min-h-[44px]"
                     >
                         Book Appointment
-                    </Link>
+                    </GlobalBookingCTA>
                 </nav>
             </div>
         </header>

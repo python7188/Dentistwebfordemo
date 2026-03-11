@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import GlobalBookingCTA from "./GlobalBookingCTA";
 
 export default function FloatingCTA() {
     return (
@@ -12,13 +13,12 @@ export default function FloatingCTA() {
             >
                 📞
             </a>
-            <Link
-                href="/contact"
+            <GlobalBookingCTA
                 className="w-14 h-14 bg-[var(--cta-orange)] text-white rounded-full flex items-center justify-center shadow-xl text-xl hover:scale-110 transition-transform"
                 aria-label="Book appointment"
             >
                 📅
-            </Link>
+            </GlobalBookingCTA>
         </div>
     );
 }
