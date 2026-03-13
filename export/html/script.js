@@ -366,6 +366,86 @@
   }
   initDoctorCarousel();
 
+  /* ─── Tips Interactive Modal ─── */
+  function initTipsModal() {
+    const modal = document.getElementById('tips-modal');
+    if (!modal) return;
+    
+    const titleEl = document.getElementById('tips-modal-title');
+    const metaEl = document.getElementById('tips-modal-meta');
+    const bodyEl = document.getElementById('tips-modal-body');
+    const cards = document.querySelectorAll('.tips__card');
+    const closeBtns = modal.querySelectorAll('[data-close]');
+    
+    let lastFocusedElement = null;
+
+    function openModal(title, meta, paragraph) {
+      titleEl.textContent = title;
+      metaEl.textContent = meta;
+      bodyEl.innerHTML = `<p>${paragraph}</p>`;
+      
+      modal.setAttribute('aria-hidden', 'false');
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden'; // Prevent background scroll
+      
+      // Focus management
+      lastFocusedElement = document.activeElement;
+      setTimeout(() => {
+        const closeBtn = modal.querySelector('.tips-modal__close');
+        if (closeBtn) closeBtn.focus();
+      }, 50);
+    }
+
+    function closeModal() {
+      modal.setAttribute('aria-hidden', 'true');
+      modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+      
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+      }
+    }
+
+    cards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        e.preventDefault(); // Stop normal link navigation
+        
+        const title = card.querySelector('h3').textContent;
+        // Find the text like "4 min read" by splitting the meta string
+        const metaText = card.querySelector('.tips__meta').textContent;
+        const readTimeMatch = metaText.match(/\d+\s*min read/i);
+        const meta = readTimeMatch ? readTimeMatch[0] : 'Quick read';
+        
+        const excerpt = card.querySelector('.tips__excerpt').textContent;
+        // In a real app, you would fetch full content here. We'll use excerpt + placeholder.
+        const fullText = `${excerpt} <br><br> Maintaining your dental health doesn't have to be complicated. By making this small adjustment to your routine, you can significantly improve your long-term clinical outcomes while keeping your smile bright and healthy.`;
+        
+        openModal(title, meta, fullText);
+      });
+      
+      // Accessibility: allow opening via Enter key
+      card.setAttribute('tabindex', '0');
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
+    });
+
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', closeModal);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+  }
+  initTipsModal();
+
   /* ─── Booking Modal ─── */
   function initBookingModal() {
     const modal = document.getElementById('booking-modal');
