@@ -1,0 +1,9 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{DOCTOR_NAME}}",
+  "jobTitle": "Dentist",
+  "alumniOf": "{{INSTITUTION}}",
+  "medicalSpecialty": "{{SPECIALTY}}",
+  "image": "{{DOCTOR_PROFILE_HERO_URL}}"
+}

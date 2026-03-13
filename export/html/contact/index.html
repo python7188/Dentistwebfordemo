@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToothCare — Contact | Dentist in {{City}}</title>
+  <meta name="description" content="Contact ToothCare. Book online or reach us by phone, email, or visit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="../" aria-label="ToothCare home"><span>Tooth<strong>Care</strong></span></a>
+        <nav class="site-header__nav" id="primary-nav" role="navigation" aria-label="Primary Navigation">
+          <ul class="site-header__nav-list">
+            <li><a href="../" class="site-header__nav-link">Home</a></li>
+            <li><a href="../services/" class="site-header__nav-link">Services</a></li>
+            <li><a href="../doctors/" class="site-header__nav-link">Doctors</a></li>
+            <li><a href="../tips/" class="site-header__nav-link">Tips</a></li>
+            <li><a href="./" class="site-header__nav-link" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="site-header__actions">
+          <a class="btn btn--primary site-header__cta" href="../#booking">Book Your Appointment</a>
+        </div>
+        <button class="site-header__hamburger" id="mobile-menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+          <span class="site-header__hamburger-line"></span><span class="site-header__hamburger-line"></span><span class="site-header__hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section class="contact" style="padding-top: calc(72px + var(--spacing-xxl));" aria-labelledby="contact-page-title">
+      <div class="container">
+        <span class="section-label reveal">Get In Touch</span>
+        <h1 id="contact-page-title" class="section-heading reveal">Contact Us</h1>
+        <p class="section-intro reveal">Reach out by phone, email, or book your visit online.</p>
+
+        <div class="contact__grid">
+          <div class="contact__info reveal reveal-d1">
+            <div class="contact__card">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <h3>Address</h3>
+              <p data-locale="address">{{STREET}}, {{CITY}}, {{REGION}} {{POSTAL}}, {{COUNTRY}}</p>
+            </div>
+            <div class="contact__card">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <h3>Phone</h3>
+              <a href="tel:{{PHONE}}">{{PHONE}}</a>
+              <p>Mon–Fri 09:00–18:00 · Sat 09:00–14:00</p>
+            </div>
+            <div class="contact__card">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <h3>Email</h3>
+              <a href="mailto:hello@toothcare.example.com">hello@toothcare.example.com</a>
+              <p>We reply within 2 hours.</p>
+            </div>
+            <div class="contact__hours">
+              <h3>Clinic Hours</h3>
+              <table>
+                <tbody>
+                  <tr><th>Monday – Friday</th><td><time datetime="09:00">9:00 AM</time> – <time datetime="18:00">6:00 PM</time></td></tr>
+                  <tr><th>Saturday</th><td><time datetime="09:00">9:00 AM</time> – <time datetime="14:00">2:00 PM</time></td></tr>
+                  <tr><th>Sunday</th><td>Closed</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="contact__visual reveal reveal-d2">
+            <div class="contact__exterior">
+              <img src="{{CLINIC_EXTERIOR}}" alt="Clinic exterior image" loading="lazy" width="1600" height="1000">
+            </div>
+            <div class="contact__map">
+              <img src="{{MAP_SNAPSHOT}}" alt="Map snapshot" loading="lazy" width="1200" height="800">
+            </div>
+          </div>
+        </div>
+
+        <form class="contact__form reveal" id="contact-form" action="#" method="POST" novalidate>
+          <h3>Send Us a Message</h3>
+          <div class="contact__form-row">
+            <div class="contact__form-group">
+              <label for="contact-name">Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="contact-name" name="name" required minlength="2" autocomplete="name">
+            </div>
+            <div class="contact__form-group">
+              <label for="contact-email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="contact-email" name="email" required autocomplete="email">
+            </div>
+          </div>
+          <div class="contact__form-group">
+            <label for="contact-phone">Phone</label>
+            <input type="tel" id="contact-phone" name="phone" autocomplete="tel">
+          </div>
+          <div class="contact__form-group">
+            <label for="contact-message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="contact-message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container"><div class="site-footer__bottom"><p>&copy; 2026 ToothCare. All rights reserved.</p></div></div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

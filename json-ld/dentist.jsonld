@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "{{CLINIC_NAME}}",
+  "image": "{{HERO_IMAGE_URL}}",
+  "telephone": "{{PHONE}}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{STREET}}",
+    "addressLocality": "{{CITY}}",
+    "addressRegion": "{{REGION}}",
+    "postalCode": "{{POSTAL}}",
+    "addressCountry": "{{COUNTRY}}"
+  },
+  "openingHours": ["Mo-Fr 09:00-18:00", "Sa 09:00-14:00"],
+  "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "120"
+  }
+}

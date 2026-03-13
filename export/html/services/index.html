@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToothCare — Services | Dentist in {{City}}</title>
+  <meta name="description" content="Top dental clinic offering preventive, cosmetic and implant dentistry. Book online — same-day appointments.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header (same as index) -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="../" aria-label="ToothCare home">
+          <span>Tooth<strong>Care</strong></span>
+        </a>
+        <nav class="site-header__nav" id="primary-nav" role="navigation" aria-label="Primary Navigation">
+          <ul class="site-header__nav-list">
+            <li><a href="../" class="site-header__nav-link">Home</a></li>
+            <li><a href="./" class="site-header__nav-link" aria-current="page">Services</a></li>
+            <li><a href="../doctors/" class="site-header__nav-link">Doctors</a></li>
+            <li><a href="../tips/" class="site-header__nav-link">Tips</a></li>
+            <li><a href="../contact/" class="site-header__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="site-header__actions">
+          <a class="btn btn--primary site-header__cta" href="../#booking">Book Your Appointment</a>
+        </div>
+        <button class="site-header__hamburger" id="mobile-menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+          <span class="site-header__hamburger-line"></span>
+          <span class="site-header__hamburger-line"></span>
+          <span class="site-header__hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+
+    <!-- Service Detail Template -->
+    <section class="hero hero--sm" aria-label="Services hero">
+      <div class="hero__content">
+        <span class="hero__label reveal">Our Services</span>
+        <h1 class="hero__title reveal reveal-d1">Comprehensive Dental Care</h1>
+        <p class="hero__sub reveal reveal-d2">From preventive checkups to advanced implant surgery. Every treatment is delivered with precision and compassion.</p>
+      </div>
+      <div class="hero__img">
+        <img src="{{SERVICE_HERO}}" alt="Service hero image" width="1920" height="1080">
+      </div>
+    </section>
+
+    <!-- Services Grid (same as index approach) -->
+    <section id="preventive" class="services" aria-labelledby="services-title-full">
+      <div class="container">
+        <h2 id="services-title-full" class="section-heading reveal">All Services</h2>
+
+        <div class="services__grid">
+          <article class="service-card reveal reveal-d1">
+            <div class="service-card__img"><img src="{{SERVICE_THUMB_1}}" alt="Service thumbnail — Preventive Care" loading="lazy" width="800" height="600"></div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Preventive Care</h3>
+              <p>Regular checkups, cleanings, and early detection to keep your smile healthy.</p>
+              <a href="#preventive-detail" class="service-card__cta">Learn more →</a>
+            </div>
+          </article>
+          <article class="service-card reveal reveal-d2">
+            <div class="service-card__img"><img src="{{SERVICE_THUMB_2}}" alt="Service thumbnail — Cosmetic Dentistry" loading="lazy" width="800" height="600"></div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Cosmetic Dentistry</h3>
+              <p>Veneers, whitening, and bonding for a brighter, more confident smile.</p>
+              <a href="#cosmetic-detail" class="service-card__cta">Learn more →</a>
+            </div>
+          </article>
+          <article class="service-card reveal reveal-d3">
+            <div class="service-card__img"><img src="{{SERVICE_THUMB_3}}" alt="Service thumbnail — Dental Implants" loading="lazy" width="800" height="600"></div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Dental Implants</h3>
+              <p>Permanent titanium root replacements with custom porcelain crowns.</p>
+              <a href="#implants-detail" class="service-card__cta">Learn more →</a>
+            </div>
+          </article>
+          <article class="service-card reveal reveal-d1">
+            <div class="service-card__img"><img src="{{SERVICE_THUMB_4}}" alt="Service thumbnail — Orthodontics" loading="lazy" width="800" height="600"></div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Orthodontics</h3>
+              <p>Clear aligners and braces to straighten teeth discreetly and comfortably.</p>
+              <a href="#orthodontics-detail" class="service-card__cta">Learn more →</a>
+            </div>
+          </article>
+          <article class="service-card reveal reveal-d2">
+            <div class="service-card__img"><img src="{{SERVICE_THUMB_5}}" alt="Service thumbnail — Restorative Care" loading="lazy" width="800" height="600"></div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Restorative Care</h3>
+              <p>Crowns, bridges, and fillings to repair damage and restore function.</p>
+              <a href="#restorative-detail" class="service-card__cta">Learn more →</a>
+            </div>
+          </article>
+          <article class="service-card reveal reveal-d3">
+            <div class="service-card__img"><img src="{{SERVICE_THUMB_6}}" alt="Service thumbnail — Emergency Dental" loading="lazy" width="800" height="600"></div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Emergency Dental</h3>
+              <p>Same-day urgent care for toothaches, fractures, and dental trauma.</p>
+              <a href="#emergency-detail" class="service-card__cta">Learn more →</a>
+            </div>
+          </article>
+          <article class="service-card reveal reveal-d1">
+            <div class="service-card__img"><img src="{{SERVICE_THUMB_7}}" alt="Service thumbnail — Periodontics" loading="lazy" width="800" height="600"></div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Periodontics</h3>
+              <p>Gum disease treatment and prevention for strong dental foundations.</p>
+              <a href="#periodontics-detail" class="service-card__cta">Learn more →</a>
+            </div>
+          </article>
+          <article class="service-card reveal reveal-d2">
+            <div class="service-card__img"><img src="{{SERVICE_THUMB_8}}" alt="Service thumbnail — Teleconsultation" loading="lazy" width="800" height="600"></div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Teleconsultation</h3>
+              <p>Virtual appointments for consultations, follow-ups, and second opinions.</p>
+              <a href="#teleconsult-detail" class="service-card__cta">Learn more →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Detail Template Example -->
+    <section id="implants-detail" class="service-detail" aria-labelledby="implants-detail-title" style="padding: var(--spacing-xxxl) 0;">
+      <div class="container">
+        <span class="section-label reveal">Service Detail</span>
+        <h2 id="implants-detail-title" class="section-heading reveal">Dental Implants</h2>
+
+        <div class="why__grid">
+          <div class="why__media reveal">
+            <img src="{{SERVICE_GALLERY_1}}" alt="Dental implant procedure" loading="lazy" width="2000" height="1200">
+          </div>
+          <div class="why__content reveal reveal-d1">
+            <h3>Overview</h3>
+            <p>A dental implant is a titanium post surgically placed in the jawbone. It acts as a permanent root for a custom-made porcelain crown. Implants look, feel, and function like natural teeth.</p>
+
+            <h3 style="margin-top: var(--spacing-lg);">How It Works</h3>
+            <ol style="padding-left: var(--spacing-md); color: var(--color-muted); line-height: 2;">
+              <li><strong>Consultation and 3-D scan</strong> — we map your jaw and plan the implant position.</li>
+              <li><strong>Implant placement</strong> — the titanium post is set under local anaesthesia.</li>
+              <li><strong>Crown fitting</strong> — once healed, a custom crown is permanently attached.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Gallery -->
+        <div style="margin-top: var(--spacing-xxl);">
+          <h3 class="reveal">Before &amp; After</h3>
+          <div class="before-after__grid" style="margin-top: var(--spacing-md);">
+            <figure class="before-after reveal reveal-d1">
+              <div class="before-after__slider" role="group" aria-label="Implant before and after">
+                <img class="before-after__before" src="{{SERVICE_GALLERY_1}}" alt="Before implant" loading="lazy" width="600" height="450">
+                <div class="before-after__after-wrap">
+                  <img class="before-after__after" src="{{SERVICE_GALLERY_2}}" alt="After implant" loading="lazy" width="600" height="450">
+                </div>
+                <button class="before-after__handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0" aria-label="Drag to compare">
+                  <span class="before-after__handle-icon" aria-hidden="true">⟷</span>
+                </button>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div style="margin-top: var(--spacing-xxl); max-width: 720px;">
+          <h3 class="reveal">Frequently Asked Questions</h3>
+          <div class="faq reveal" style="margin-top: var(--spacing-md);">
+            <details style="border-bottom: 1px solid var(--color-border); padding: var(--spacing-sm) 0;">
+              <summary style="cursor: pointer; font-weight: var(--fw-semibold); list-style: none;">How long do implants last?</summary>
+              <p style="margin-top: var(--spacing-xs); color: var(--color-muted); font-size: var(--small-size);">With proper care, dental implants can last a lifetime. The crown may need replacement after 10–15 years.</p>
+            </details>
+            <details style="border-bottom: 1px solid var(--color-border); padding: var(--spacing-sm) 0;">
+              <summary style="cursor: pointer; font-weight: var(--fw-semibold); list-style: none;">Is the procedure painful?</summary>
+              <p style="margin-top: var(--spacing-xs); color: var(--color-muted); font-size: var(--small-size);">The surgery is performed under local anaesthesia, so you feel no pain. Mild discomfort after the procedure is managed with medication.</p>
+            </details>
+            <details style="border-bottom: 1px solid var(--color-border); padding: var(--spacing-sm) 0;">
+              <summary style="cursor: pointer; font-weight: var(--fw-semibold); list-style: none;">What is the recovery timeline?</summary>
+              <p style="margin-top: var(--spacing-xs); color: var(--color-muted); font-size: var(--small-size);">Healing takes 3–6 months as the implant fuses with the bone. A temporary crown is placed during this period.</p>
+            </details>
+          </div>
+        </div>
+
+        <!-- Pinned Booking CTA -->
+        <div class="cta-strip reveal" style="margin-top: var(--spacing-xxl); border-radius: 16px;">
+          <div class="container">
+            <h2>Ready to Restore Your Smile?</h2>
+            <p>Book a consultation to discuss your implant options.</p>
+            <button class="btn btn--primary btn--lg book-trigger">Book Your Appointment</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 ToothCare. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

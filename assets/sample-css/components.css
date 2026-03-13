@@ -1,0 +1,65 @@
+/* ═══════════════════════════════════════════════════════════
+   TOOTHCARE — Component CSS (Sample Extracted Components)
+   Use exact class names as specified. Import into main stylesheet
+   or use standalone.
+   ═══════════════════════════════════════════════════════════ */
+
+/* --- .site-header --- */
+.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(247, 250, 249, 0.85); backdrop-filter: blur(16px); }
+.site-header--scrolled { box-shadow: 0 8px 24px rgba(11,43,59,0.08); }
+
+/* --- .container --- */
+.container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+
+/* --- .hero --- */
+.hero { display: flex; flex-direction: column; min-height: 55vh; padding-top: 72px; position: relative; overflow: hidden; }
+.hero__img { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; }
+.hero__content { position: relative; z-index: 2; padding: 48px 24px 32px; max-width: 640px; }
+.hero__title { font-size: clamp(24px, 4vw, 56px); font-weight: 700; line-height: 1.15; }
+.hero__sub { font-size: 1.1rem; color: #6b7785; line-height: 1.6; }
+.hero__ctas { display: flex; flex-wrap: wrap; gap: 16px; }
+
+/* --- .why --- */
+.why { padding: 96px 0; }
+.why__media { position: relative; border-radius: 16px; overflow: hidden; }
+.why__content { display: flex; flex-direction: column; justify-content: center; }
+
+/* --- .stat --- */
+.stat { text-align: center; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(11,43,59,0.06); }
+
+/* --- .service-card --- */
+.service-card { background: #f7faf9; border-radius: 16px; overflow: hidden; transition: transform 240ms, box-shadow 240ms; }
+.service-card:hover { transform: translateY(-8px); box-shadow: 0 16px 40px rgba(11,43,59,0.14); }
+.service-card__img { aspect-ratio: 4/3; overflow: hidden; }
+.service-card__title { font-size: clamp(18px, 2vw, 24px); }
+
+/* --- .doctor-card --- */
+.doctor-card { background: #f7faf9; border-radius: 16px; overflow: hidden; }
+.doctor-card__img { aspect-ratio: 1; overflow: hidden; }
+.doctor-card__meta { padding: 24px; }
+
+/* --- .booking-modal --- */
+.booking-modal { position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center; justify-content: center; }
+.booking-modal[hidden] { display: none; }
+.booking-step { font-size: 12px; padding: 6px 14px; border-radius: 50px; }
+.booking-step.active { background: #16a39d; color: #fff; }
+.booking-summary { background: #f7faf9; border-radius: 12px; padding: 24px; }
+
+/* --- .before-after --- */
+.before-after__slider { position: relative; overflow: hidden; border-radius: 12px; cursor: ew-resize; }
+.before-after__handle { position: absolute; top: 0; width: 4px; height: 100%; background: #fff; border: none; cursor: ew-resize; z-index: 5; }
+
+/* --- .testimonial-carousel --- */
+.testimonial-carousel__track { display: flex; transition: transform 500ms cubic-bezier(.22,.9,.28,1); }
+.testimonial-slide { flex: 0 0 100%; padding: 0 16px; }
+
+/* --- .btn --- */
+.btn { display: inline-flex; align-items: center; justify-content: center; font-weight: 600; padding: 12px 28px; border-radius: 50px; border: 2px solid transparent; cursor: pointer; transition: all 240ms; }
+.btn--primary { background: #16a39d; color: #fff; }
+.btn--primary:hover { background: #128a85; transform: scale(1.03); }
+.btn--ghost { background: transparent; color: #0b2b3b; border-color: #e2e8ed; }
+.btn--outline { background: transparent; color: #16a39d; border-color: #16a39d; }
+
+/* --- .skip-link --- */
+.skip-link { position: absolute; top: -100%; left: 16px; background: #0b2b3b; color: #fff; padding: 8px 16px; border-radius: 0 0 8px 8px; z-index: 10000; }
+.skip-link:focus { top: 0; }

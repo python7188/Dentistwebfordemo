@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToothCare — Tips & Blog | Dentist in {{City}}</title>
+  <meta name="description" content="Expert dental advice, treatment guides, and tips for a healthier, brighter smile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="../" aria-label="ToothCare home"><span>Tooth<strong>Care</strong></span></a>
+        <nav class="site-header__nav" id="primary-nav" role="navigation" aria-label="Primary Navigation">
+          <ul class="site-header__nav-list">
+            <li><a href="../" class="site-header__nav-link">Home</a></li>
+            <li><a href="../services/" class="site-header__nav-link">Services</a></li>
+            <li><a href="../doctors/" class="site-header__nav-link">Doctors</a></li>
+            <li><a href="./" class="site-header__nav-link" aria-current="page">Tips</a></li>
+            <li><a href="../contact/" class="site-header__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="site-header__actions">
+          <a class="btn btn--primary site-header__cta" href="../#booking">Book Your Appointment</a>
+        </div>
+        <button class="site-header__hamburger" id="mobile-menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+          <span class="site-header__hamburger-line"></span><span class="site-header__hamburger-line"></span><span class="site-header__hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section class="tips" style="padding-top: calc(72px + var(--spacing-xxl));" aria-labelledby="tips-page-title">
+      <div class="container">
+        <span class="section-label reveal">From Our Blog</span>
+        <h1 id="tips-page-title" class="section-heading reveal">Tips &amp; Insights</h1>
+        <p class="section-intro reveal">Expert advice for a healthier, brighter smile.</p>
+
+        <div class="tips__grid">
+          <article class="tips__card reveal reveal-d1">
+            <div class="tips__card-img">
+              <img src="{{BLOG_THUMB_1}}" alt="Blog article thumbnail" loading="lazy" width="600" height="338">
+              <span class="tips__tag">Preventive Care</span>
+            </div>
+            <div class="tips__card-body">
+              <h3><a href="../pages/blog-post-1.html">The Complete Guide to Daily Brushing</a></h3>
+              <p class="tips__excerpt">Proper technique matters more than frequency. Learn the right way to brush for maximum plaque removal.</p>
+              <p class="tips__meta">By Dr. S. Kumar · <time datetime="2026-03-01">1 Mar 2026</time> · 4 min read</p>
+            </div>
+          </article>
+          <article class="tips__card reveal reveal-d2">
+            <div class="tips__card-img">
+              <img src="{{BLOG_THUMB_2}}" alt="Blog article thumbnail" loading="lazy" width="600" height="338">
+              <span class="tips__tag">Cosmetic</span>
+            </div>
+            <div class="tips__card-body">
+              <h3><a href="../pages/blog-post-2.html">5 Things to Know Before Getting Veneers</a></h3>
+              <p class="tips__excerpt">Considering veneers? Here is what to ask your dentist and what the process feels like.</p>
+              <p class="tips__meta">By Dr. N. Patel · <time datetime="2026-02-18">18 Feb 2026</time> · 5 min read</p>
+            </div>
+          </article>
+          <article class="tips__card reveal reveal-d3">
+            <div class="tips__card-img">
+              <img src="{{BLOG_THUMB_3}}" alt="Blog article thumbnail" loading="lazy" width="600" height="338">
+              <span class="tips__tag">Technology</span>
+            </div>
+            <div class="tips__card-body">
+              <h3><a href="../pages/blog-post-3.html">How 3-D Imaging Is Transforming Implants</a></h3>
+              <p class="tips__excerpt">Cone-beam CT and AI-guided surgery are making implants faster, safer, and more predictable.</p>
+              <p class="tips__meta">By Dr. R. Rao · <time datetime="2026-02-05">5 Feb 2026</time> · 6 min read</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container"><div class="site-footer__bottom"><p>&copy; 2026 ToothCare. All rights reserved.</p></div></div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

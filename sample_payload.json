@@ -1,0 +1,15 @@
+{
+  "clinic": "ToothCare",
+  "service": "Preventive Care",
+  "provider": "Dr. S. Kumar",
+  "datetime": "2026-04-20T14:30:00+05:30",
+  "timezone": "Asia/Kolkata",
+  "patient": {
+    "name": "Test User",
+    "email": "test@example.com",
+    "phone_e164": "+919876543210"
+  },
+  "utm": {
+    "source": "test"
+  }
+}

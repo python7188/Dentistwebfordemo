@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToothCare — Our Doctors | Dentist in {{City}}</title>
+  <meta name="description" content="Meet our board-certified dental specialists. Book online — same-day appointments.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="../" aria-label="ToothCare home"><span>Tooth<strong>Care</strong></span></a>
+        <nav class="site-header__nav" id="primary-nav" role="navigation" aria-label="Primary Navigation">
+          <ul class="site-header__nav-list">
+            <li><a href="../" class="site-header__nav-link">Home</a></li>
+            <li><a href="../services/" class="site-header__nav-link">Services</a></li>
+            <li><a href="./" class="site-header__nav-link" aria-current="page">Doctors</a></li>
+            <li><a href="../tips/" class="site-header__nav-link">Tips</a></li>
+            <li><a href="../contact/" class="site-header__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="site-header__actions">
+          <a class="btn btn--primary site-header__cta" href="../#booking">Book Your Appointment</a>
+        </div>
+        <button class="site-header__hamburger" id="mobile-menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+          <span class="site-header__hamburger-line"></span><span class="site-header__hamburger-line"></span><span class="site-header__hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section class="doctors" style="padding-top: calc(72px + var(--spacing-xxl));" aria-labelledby="doctors-page-title">
+      <div class="container">
+        <span class="section-label reveal">Our Experts</span>
+        <h1 id="doctors-page-title" class="section-heading reveal">Meet Our Doctors</h1>
+        <p class="section-intro reveal">Board-certified, compassionate, and dedicated to clinical excellence.</p>
+
+        <div class="doctors__filters reveal" role="tablist" aria-label="Filter doctors by specialty">
+          <button class="doctors__filter active" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button class="doctors__filter" role="tab" aria-selected="false" data-filter="implantology">Implantology</button>
+          <button class="doctors__filter" role="tab" aria-selected="false" data-filter="orthodontics">Orthodontics</button>
+          <button class="doctors__filter" role="tab" aria-selected="false" data-filter="cosmetic">Cosmetic</button>
+        </div>
+
+        <div class="doctors__grid">
+          <article class="doctor-card reveal reveal-d1" data-specialty="implantology">
+            <div class="doctor-card__img"><img src="{{DOCTOR_PHOTO_1}}" alt="Dr. S. Kumar portrait" loading="lazy" width="1200" height="1200"></div>
+            <div class="doctor-card__meta">
+              <h3>Dr. S. Kumar</h3>
+              <p class="doctor-card__specialty">BDS, MDS — Implantologist</p>
+              <p class="doctor-card__exp">12+ years experience</p>
+              <p class="doctor-card__lang">Languages: English, Telugu</p>
+              <a href="../pages/dr-s-kumar.html" class="btn btn--outline btn--sm">View Profile</a>
+            </div>
+          </article>
+          <article class="doctor-card reveal reveal-d2" data-specialty="orthodontics">
+            <div class="doctor-card__img"><img src="{{DOCTOR_PHOTO_2}}" alt="Dr. A. Sharma portrait" loading="lazy" width="1200" height="1200"></div>
+            <div class="doctor-card__meta">
+              <h3>Dr. A. Sharma</h3>
+              <p class="doctor-card__specialty">BDS, MDS — Orthodontist</p>
+              <p class="doctor-card__exp">9+ years experience</p>
+              <p class="doctor-card__lang">Languages: English, Hindi</p>
+              <a href="../pages/dr-a-sharma.html" class="btn btn--outline btn--sm">View Profile</a>
+            </div>
+          </article>
+          <article class="doctor-card reveal reveal-d3" data-specialty="cosmetic">
+            <div class="doctor-card__img"><img src="{{DOCTOR_PHOTO_3}}" alt="Dr. N. Patel portrait" loading="lazy" width="1200" height="1200"></div>
+            <div class="doctor-card__meta">
+              <h3>Dr. N. Patel</h3>
+              <p class="doctor-card__specialty">BDS — Cosmetic Dentist</p>
+              <p class="doctor-card__exp">15+ years experience</p>
+              <p class="doctor-card__lang">Languages: English, Gujarati</p>
+              <a href="../pages/dr-n-patel.html" class="btn btn--outline btn--sm">View Profile</a>
+            </div>
+          </article>
+          <article class="doctor-card reveal reveal-d1" data-specialty="implantology">
+            <div class="doctor-card__img"><img src="{{DOCTOR_PHOTO_4}}" alt="Dr. R. Rao portrait" loading="lazy" width="1200" height="1200"></div>
+            <div class="doctor-card__meta">
+              <h3>Dr. R. Rao</h3>
+              <p class="doctor-card__specialty">BDS, MDS — Prosthodontist</p>
+              <p class="doctor-card__exp">10+ years experience</p>
+              <p class="doctor-card__lang">Languages: English, Telugu, Hindi</p>
+              <button class="btn btn--outline btn--sm book-trigger" data-doctor="dr-r-rao">Book with Dr. Rao</button>
+            </div>
+          </article>
+          <article class="doctor-card reveal reveal-d2" data-specialty="cosmetic">
+            <div class="doctor-card__img"><img src="{{DOCTOR_PHOTO_5}}" alt="Dr. L. Chen portrait" loading="lazy" width="1200" height="1200"></div>
+            <div class="doctor-card__meta">
+              <h3>Dr. L. Chen</h3>
+              <p class="doctor-card__specialty">DDS — Endodontist</p>
+              <p class="doctor-card__exp">8+ years experience</p>
+              <p class="doctor-card__lang">Languages: English, Mandarin</p>
+              <button class="btn btn--outline btn--sm book-trigger" data-doctor="dr-l-chen">Book with Dr. Chen</button>
+            </div>
+          </article>
+          <article class="doctor-card reveal reveal-d3" data-specialty="orthodontics">
+            <div class="doctor-card__img"><img src="{{DOCTOR_PHOTO_6}}" alt="Dr. M. Ali portrait" loading="lazy" width="1200" height="1200"></div>
+            <div class="doctor-card__meta">
+              <h3>Dr. M. Ali</h3>
+              <p class="doctor-card__specialty">BDS, MDS — Periodontist</p>
+              <p class="doctor-card__exp">11+ years experience</p>
+              <p class="doctor-card__lang">Languages: English, Urdu, Arabic</p>
+              <button class="btn btn--outline btn--sm book-trigger" data-doctor="dr-m-ali">Book with Dr. Ali</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container"><div class="site-footer__bottom"><p>&copy; 2026 ToothCare. All rights reserved.</p></div></div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
