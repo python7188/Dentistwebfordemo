@@ -6,7 +6,7 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { supabase, getCurrentUser, signOut } from "../../lib/supabaseClient";
+import { supabase, getCurrentUser, signOut } from "../lib/supabaseClient";
 
 const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 

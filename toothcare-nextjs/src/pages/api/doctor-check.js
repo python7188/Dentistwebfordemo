@@ -7,7 +7,7 @@
 //  - Check Origin header in production (see comment below).
 //  - Validate input before querying.
 
-import { createServerClient } from "../../../lib/supabase-server";
+import { createServerClient } from "../../lib/supabase-server";
 
 export default async function handler(req, res) {
   // ── CSRF mitigation: accept POST only ───────────────────────────────────

@@ -14,7 +14,7 @@
 //  - Validate all fields server-side.
 //  - Uses SERVICE_ROLE_KEY via supabase-server.js.
 
-import { createServerClient } from "../../../lib/supabase-server";
+import { createServerClient } from "../../lib/supabase-server";
 
 export default async function handler(req, res) {
   // ── Method guard ────────────────────────────────────────────────────────

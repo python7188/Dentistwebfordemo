@@ -10,7 +10,7 @@
 //  - Uses SERVICE_ROLE_KEY server client for integrity-critical checks
 //  - All inputs validated before any DB write
 
-import { createServerClient } from "../../../lib/supabase-server";
+import { createServerClient } from "../../lib/supabase-server";
 
 export default async function handler(req, res) {
   // ── Method guard ────────────────────────────────────────────────────────

@@ -6,7 +6,7 @@
 import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { supabase, getCurrentUser, signOut, signInWithGoogle } from "../../lib/supabaseClient";
+import { supabase, getCurrentUser, signOut, signInWithGoogle } from "../lib/supabaseClient";
 
 const PENDING_KEY = "toothcare_pending_booking";
 
