@@ -5,7 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOOTHCARE | Luxury Editorial Dentistry</title>
     <meta name="description" content="Premium dental care meets luxury comfort. The architects behind your smile.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Lenis CSS for Smooth Scroll -->
+    <style>
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+    </style>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
 </head>
 <body>
@@ -38,7 +63,7 @@
             <div class="container">
                 <div class="editorial-overlap">
                     <div class="editorial-img-wrapper reveal">
-                        <img src="images/hero.png" alt="A sophisticated and luxurious smile" class="img-editorial" width="800" height="1000">
+                        <img src="images/HOME PAGE.jpeg.jpg" alt="A sophisticated and luxurious smile" class="img-editorial" width="800" height="1000">
                     </div>
                     <div class="editorial-content reveal delay-200">
                         <p class="uppercase-tracking text-accent">The Architects Behind Your Smile</p>
@@ -47,6 +72,25 @@
                         <div class="divider"></div>
                         <a href="booking.html" class="btn btn-primary" style="margin-top: 1rem;">Begin Your Transformation</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Simulator Section -->
+        <section class="section bg-slate" id="ai-simulator" style="position: relative; overflow: hidden;">
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="text-center reveal" style="margin-bottom: 4rem;">
+                    <p class="uppercase-tracking text-accent">Virtual Consultation</p>
+                    <h2 class="text-display-md" style="margin-top: 1rem; color: var(--color-charcoal);">AI Smile Simulator</h2>
+                    <p class="text-body-md" style="max-width: 600px; margin: 1rem auto 0; color: var(--color-muted);">Upload a selfie and let our proprietary AI show you your potential smile. See the future before you even book.</p>
+                </div>
+                
+                <div class="ai-simulator-wrapper reveal delay-100">
+                    <img src="images/blog-smile.png" id="ai-demo-img" alt="Upload placeholder" style="filter: grayscale(100%); transition: filter 2s;" />
+                    <div class="ai-grid" id="ai-grid"></div>
+                    <div class="ai-scanning-line" id="ai-scan-line"></div>
+                    <div class="ai-data-points" id="ai-data-points">AWAITING IMAGE...</div>
+                    <button class="btn btn-brass magnetic ai-upload-btn" id="trigger-ai-btn">Simulate My Smile</button>
                 </div>
             </div>
         </section>
@@ -78,19 +122,19 @@
 
                 <div class="grid grid-cols-3 gap-8">
                     <article class="reveal delay-100">
-                        <img src="images/doctor-1.png" alt="Cosmetic Dentistry" class="img-editorial" style="aspect-ratio: 3/4; width: 100%; margin-bottom: 1.5rem;">
+                        <img src="images/Cosmetic Dentistry.jpeg" alt="Cosmetic Dentistry" class="img-editorial" style="aspect-ratio: 3/4; width: 100%; margin-bottom: 1.5rem; object-fit: cover;">
                         <h3 class="text-heading-sm">Cosmetic Restorations</h3>
                         <p class="text-body-sm">Porcelain veneers, bonding, and professional whitening tailored to your unique facial geometry.</p>
                         <a href="services.html#cosmetic" class="text-xs uppercase-tracking" style="border-bottom: 1px solid var(--color-charcoal); padding-bottom: 2px;">Learn More</a>
                     </article>
                     <article class="reveal delay-200">
-                        <img src="images/doctor-2.png" alt="Surgical Implants" class="img-editorial" style="aspect-ratio: 3/4; width: 100%; margin-bottom: 1.5rem;">
+                        <img src="images/dental implant.jpeg" alt="Surgical Implants" class="img-editorial" style="aspect-ratio: 3/4; width: 100%; margin-bottom: 1.5rem; object-fit: cover;">
                         <h3 class="text-heading-sm">Surgical Implants</h3>
                         <p class="text-body-sm">Permanent, natural-looking replacements utilizing 3D-guided surgical precision.</p>
                         <a href="services.html#implants" class="text-xs uppercase-tracking" style="border-bottom: 1px solid var(--color-charcoal); padding-bottom: 2px;">Learn More</a>
                     </article>
                     <article class="reveal delay-300">
-                        <img src="images/doctor-3.png" alt="Orthodontics" class="img-editorial" style="aspect-ratio: 3/4; width: 100%; margin-bottom: 1.5rem;">
+                        <img src="images/Orthodontics.jpeg" alt="Orthodontics" class="img-editorial" style="aspect-ratio: 3/4; width: 100%; margin-bottom: 1.5rem; object-fit: cover;">
                         <h3 class="text-heading-sm">Clear Orthodontics</h3>
                         <p class="text-body-sm">Discreet alignment solutions designed to perfect your smile without disrupting your life.</p>
                         <a href="services.html#orthodontics" class="text-xs uppercase-tracking" style="border-bottom: 1px solid var(--color-charcoal); padding-bottom: 2px;">Learn More</a>
@@ -107,11 +151,11 @@
                     <div class="carousel" style="margin-top: 3rem;">
                         <div class="carousel-track">
                             <div class="testimonial-slide">
-                                <p class="text-heading-md italic" style="color: var(--color-alabaster);">"They didn't just fix my teeth; they engineered a smile that completely changed how I present myself to the world."</p>
+                                <p class="text-heading-md italic" style="color: var(--color-charcoal);">"They didn't just fix my teeth; they engineered a smile that completely changed how I present myself to the world."</p>
                                 <p class="uppercase-tracking" style="margin-top: 2rem; color: var(--color-brass);">— E. Sterling, Los Angeles</p>
                             </div>
                             <div class="testimonial-slide">
-                                <p class="text-heading-md italic" style="color: var(--color-alabaster);">"The environment is stunning. It feels less like a medical facility and more like an exclusive private club."</p>
+                                <p class="text-heading-md italic" style="color: var(--color-charcoal);">"The environment is stunning. It feels less like a medical facility and more like an exclusive private club."</p>
                                 <p class="uppercase-tracking" style="margin-top: 2rem; color: var(--color-brass);">— M. Chen, San Francisco</p>
                             </div>
                         </div>
@@ -131,17 +175,17 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a class="logo" href="index.html" aria-label="TOOTHCARE home">TOOTH<span>CARE</span></a>
-                    <p class="text-body-sm" style="margin-top: 1rem; color: rgba(250,249,246,0.7); max-width: 300px;">Premium dental care meets luxury comfort. California's most trusted cosmetic and general dental studio.</p>
+                    <p class="text-body-sm" style="margin-top: 1rem; color: var(--color-muted); max-width: 300px;">Premium dental care meets luxury comfort. California's most trusted cosmetic and general dental studio.</p>
                 </div>
                 <div>
-                    <h4 class="text-body-sm uppercase-tracking" style="color: var(--color-alabaster); margin-bottom: 1rem;">Navigation</h4>
+                    <h4 class="text-body-sm uppercase-tracking" style="color: var(--color-charcoal); margin-bottom: 1rem;">Navigation</h4>
                     <a href="services.html" class="footer-link">Our Services</a>
                     <a href="doctors.html" class="footer-link">Meet the Doctors</a>
                     <a href="gallery.html" class="footer-link">Smile Gallery</a>
                     <a href="blog.html" class="footer-link">Journal</a>
                 </div>
                 <div>
-                    <h4 class="text-body-sm uppercase-tracking" style="color: var(--color-alabaster); margin-bottom: 1rem;">Contact</h4>
+                    <h4 class="text-body-sm uppercase-tracking" style="color: var(--color-charcoal); margin-bottom: 1rem;">Contact</h4>
                     <a href="booking.html" class="footer-link">Book Appointment</a>
                     <a href="contact.html" class="footer-link">Locations & Hours</a>
                     <a href="tel:+10000000000" class="footer-link">+1 (000) 000-0000</a>
@@ -158,5 +202,15 @@
     </footer>
 
     <script src="script.js" defer></script>
+
+    <!-- Dependencies for WOW Factor -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
 </body>
 </html>
