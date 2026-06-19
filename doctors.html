@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Doctors — TOOTHCARE | Board-Certified Cosmetic &amp; General Dentists</title>
-    <meta name="description"
-        content="Meet the expert dentists at TOOTHCARE — board-certified specialists in cosmetic, implant, and restorative dentistry. Schedule your visit today.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    <title>Our Doctors | Luxury Editorial Dentistry</title>
+    <meta name="description" content="Meet the expert dentists at TOOTHCARE — board-certified specialists in cosmetic, implant, and restorative dentistry.">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
 </head>
-
 <body>
 
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" style="position:absolute; left:-9999px;">Skip to content</a>
 
-    <header id="site-header" class="header scrolled">
-        <div class="header-inner">
+    <header id="site-header" class="header">
+        <div class="container header-inner">
             <a id="logo" class="logo" href="index.html" aria-label="TOOTHCARE home">TOOTH<span>CARE</span></a>
             <nav id="primary-nav" class="nav" role="navigation" aria-label="Primary Navigation">
                 <ul class="nav-list">
@@ -36,155 +27,126 @@
                 <a class="btn btn-primary mobile-book-btn" href="booking.html">Book Appointment</a>
             </nav>
             <a id="book-btn" class="btn btn-primary" href="booking.html" role="button">Book Appointment</a>
-            <button id="mobile-menu-toggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"
-                aria-label="Open menu"><span class="hamburger"></span></button>
+            <button id="mobile-menu-toggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="hamburger"></span></button>
         </div>
     </header>
 
-    <main id="main" style="padding-top:100px;">
+    <main id="main">
 
-        <section class="section-pad" style="text-align:center;background:linear-gradient(135deg,#f0f4f8,#faf8f5);">
+        <!-- Page Hero -->
+        <section class="section section-lg bg-slate" style="text-align: center;">
             <div class="container">
-                <span class="section-label">Our Experts</span>
-                <h1 style="font-family:var(--font-display);font-size:2.75rem;margin-bottom:16px;">Meet Our Doctors</h1>
-                <p class="lead" style="max-width:600px;margin:0 auto;">Board-certified, compassionate, and dedicated to
-                    giving you the smile you deserve. Get to know the team behind TOOTHCARE.</p>
+                <p class="uppercase-tracking text-brass reveal">Our Experts</p>
+                <h1 class="text-display-md reveal delay-100" style="margin-top: 1rem; margin-bottom: 2rem; color: var(--color-alabaster);">Meet Our Doctors.</h1>
+                <p class="text-body-lg reveal delay-200" style="max-width: 600px; margin: 0 auto; color: rgba(250,249,246,0.8);">Board-certified, compassionate, and dedicated to giving you the smile you deserve. Get to know the architects behind your smile.</p>
+                <div class="divider divider-center reveal delay-300" style="background-color: var(--color-alabaster);"></div>
             </div>
         </section>
 
-        <section class="section-pad">
+        <!-- Doctors List -->
+        <section class="section">
             <div class="container">
-
+                
                 <!-- Dr. Jane Doe -->
-                <article class="reveal"
-                    style="display:grid;grid-template-columns:1fr;gap:40px;align-items:center;margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid rgba(0,0,0,0.06);"
-                    id="dr-jane-doe">
-                    <div style="display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start;">
-                        <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-2);">
-                            <img src="images/doctor-1.png" alt="Dr. Jane Doe — Cosmetic &amp; Implant Specialist"
-                                width="400" height="467" loading="lazy" style="width:100%;height:auto;display:block;">
-                        </div>
-                        <div>
-                            <span class="section-label">Cosmetic &amp; Implant Specialist</span>
-                            <h2 style="font-family:var(--font-display);margin-bottom:8px;">Dr. Jane Doe, DDS</h2>
-                            <p style="color:var(--accent-teal);font-weight:600;font-size:0.9rem;margin-bottom:16px;">
-                                UCLA School of Dentistry · 18 Years of Practice</p>
-                            <p style="color:var(--muted);line-height:1.7;margin-bottom:12px;">Dr. Jane Doe is one of
-                                California's most sought-after cosmetic dentists, specializing in porcelain veneers,
-                                smile design, and full-arch implant restorations. She trained at UCLA School of
-                                Dentistry and has since completed advanced fellowships in aesthetic and implant
-                                dentistry.</p>
-                            <p style="color:var(--muted);line-height:1.7;margin-bottom:16px;">Her philosophy centers on
-                                listening — understanding each patient's goals before crafting a treatment plan that's
-                                both clinically excellent and personally meaningful. She believes that a great smile
-                                begins with trust, and takes the time to ensure every patient feels informed and
-                                relaxed.</p>
-                            <p style="font-size:0.85rem;color:var(--muted);margin-bottom:20px;">🏆 ADA Fellow · AACD
-                                Member · Top Provider — Invisalign Diamond Plus</p>
-                            <a class="btn btn-primary" href="booking.html">Schedule with Dr. Doe</a>
-                        </div>
+                <div class="editorial-overlap" style="margin-bottom: var(--space-24);">
+                    <div class="editorial-img-wrapper reveal">
+                        <img src="images/doctor-1.png" alt="Dr. Jane Doe" class="img-editorial" width="600" height="800">
                     </div>
-                </article>
+                    <div class="editorial-content reveal delay-200">
+                        <p class="uppercase-tracking text-accent">Cosmetic & Implant Specialist</p>
+                        <h2 class="text-heading-lg" style="margin-top: 1rem; margin-bottom: 0.5rem;">Dr. Jane Doe, DDS</h2>
+                        <p class="text-body-sm text-muted uppercase-tracking" style="margin-bottom: 1.5rem;">UCLA School of Dentistry · 18 Years</p>
+                        <p class="text-body-md text-muted">Dr. Jane Doe is one of California's most sought-after cosmetic dentists, specializing in porcelain veneers, smile design, and full-arch implant restorations. Her philosophy centers on listening — understanding each patient's goals before crafting a treatment plan that's both clinically excellent and personally meaningful.</p>
+                        <ul style="display:flex; flex-wrap:wrap; gap: 1rem; margin-top: 1.5rem; margin-bottom: 2rem;">
+                            <li class="uppercase-tracking" style="padding: 0.5rem 1rem; border: 1px solid var(--color-charcoal); font-size: 0.65rem;">ADA Fellow</li>
+                            <li class="uppercase-tracking" style="padding: 0.5rem 1rem; border: 1px solid var(--color-charcoal); font-size: 0.65rem;">AACD Member</li>
+                            <li class="uppercase-tracking" style="padding: 0.5rem 1rem; border: 1px solid var(--color-charcoal); font-size: 0.65rem;">Invisalign Diamond Plus</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-outline">Schedule with Dr. Doe</a>
+                    </div>
+                </div>
 
                 <!-- Dr. Michael Chen -->
-                <article class="reveal"
-                    style="display:grid;grid-template-columns:1fr;gap:40px;align-items:center;margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid rgba(0,0,0,0.06);"
-                    id="dr-michael-chen">
-                    <div style="display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start;">
-                        <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-2);">
-                            <img src="images/doctor-2.png"
-                                alt="Dr. Michael Chen — Prosthodontist &amp; Restorative Expert" width="400"
-                                height="467" loading="lazy" style="width:100%;height:auto;display:block;">
-                        </div>
-                        <div>
-                            <span class="section-label">Prosthodontist &amp; Restorative Expert</span>
-                            <h2 style="font-family:var(--font-display);margin-bottom:8px;">Dr. Michael Chen, DDS, MSD
-                            </h2>
-                            <p style="color:var(--accent-teal);font-weight:600;font-size:0.9rem;margin-bottom:16px;">
-                                Stanford University · 22 Years of Practice</p>
-                            <p style="color:var(--muted);line-height:1.7;margin-bottom:12px;">Dr. Chen is a
-                                board-certified prosthodontist with over two decades of experience in complex full-mouth
-                                reconstructions, implant-supported prosthetics, and TMJ therapy. He earned his master's
-                                degree in prosthodontics from Stanford and has lectured internationally on advanced
-                                restorative techniques.</p>
-                            <p style="color:var(--muted);line-height:1.7;margin-bottom:16px;">Known for his meticulous
-                                approach and gentle chairside manner, Dr. Chen takes pride in rebuilding not just teeth,
-                                but confidence. He works closely with the lab to ensure every restoration fits perfectly
-                                and looks indistinguishable from natural dentition.</p>
-                            <p style="font-size:0.85rem;color:var(--muted);margin-bottom:20px;">🏆 Board Certified
-                                Prosthodontist · AGD Master · Published Researcher</p>
-                            <a class="btn btn-primary" href="booking.html">Schedule with Dr. Chen</a>
-                        </div>
+                <div class="editorial-overlap" style="direction: rtl; margin-bottom: var(--space-24);">
+                    <div class="editorial-img-wrapper reveal" style="direction: ltr;">
+                        <img src="images/doctor-2.png" alt="Dr. Michael Chen" class="img-editorial" width="600" height="800">
                     </div>
-                </article>
+                    <div class="editorial-content bg-warm-grey reveal delay-200" style="direction: ltr; margin-left: 0; margin-right: -15%;">
+                        <p class="uppercase-tracking text-accent">Prosthodontist & Restorative</p>
+                        <h2 class="text-heading-lg" style="margin-top: 1rem; margin-bottom: 0.5rem;">Dr. Michael Chen, DDS</h2>
+                        <p class="text-body-sm text-muted uppercase-tracking" style="margin-bottom: 1.5rem;">Stanford University · 22 Years</p>
+                        <p class="text-body-md text-muted">Dr. Chen is a board-certified prosthodontist with over two decades of experience in complex full-mouth reconstructions and TMJ therapy. Known for his meticulous approach and gentle chairside manner, Dr. Chen takes pride in rebuilding not just teeth, but confidence.</p>
+                        <ul style="display:flex; flex-wrap:wrap; gap: 1rem; margin-top: 1.5rem; margin-bottom: 2rem;">
+                            <li class="uppercase-tracking" style="padding: 0.5rem 1rem; border: 1px solid var(--color-charcoal); font-size: 0.65rem;">Board Certified</li>
+                            <li class="uppercase-tracking" style="padding: 0.5rem 1rem; border: 1px solid var(--color-charcoal); font-size: 0.65rem;">AGD Master</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-outline">Schedule with Dr. Chen</a>
+                    </div>
+                </div>
 
                 <!-- Dr. Alex Rivera -->
-                <article class="reveal" style="display:grid;grid-template-columns:1fr;gap:40px;align-items:center;"
-                    id="dr-alex-rivera">
-                    <div style="display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start;">
-                        <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-2);">
-                            <img src="images/doctor-3.png"
-                                alt="Dr. Alex Rivera — Orthodontist &amp; Clear Aligner Expert" width="400" height="467"
-                                loading="lazy" style="width:100%;height:auto;display:block;">
-                        </div>
-                        <div>
-                            <span class="section-label">Orthodontist &amp; Clear Aligner Expert</span>
-                            <h2 style="font-family:var(--font-display);margin-bottom:8px;">Dr. Alex Rivera, DMD</h2>
-                            <p style="color:var(--accent-teal);font-weight:600;font-size:0.9rem;margin-bottom:16px;">USC
-                                School of Dentistry · 12 Years of Practice</p>
-                            <p style="color:var(--muted);line-height:1.7;margin-bottom:12px;">Dr. Rivera completed his
-                                orthodontic residency at the University of Southern California and is one of the top
-                                Invisalign providers in the state. He has treated over 3,000 cases — from simple adult
-                                alignment to complex bite corrections — with a focus on efficient, comfortable treatment
-                                plans.</p>
-                            <p style="color:var(--muted);line-height:1.7;margin-bottom:16px;">He's especially passionate
-                                about working with patients who've been told they're "too old for braces" — proving that
-                                it's never too late for a transformative smile. With a combination of cutting-edge
-                                digital planning and personal attention, Dr. Rivera makes orthodontic treatment an
-                                enjoyable experience.</p>
-                            <p style="font-size:0.85rem;color:var(--muted);margin-bottom:20px;">🏆 AAO Member ·
-                                Invisalign Diamond Provider · Digital Orthodontics Pioneer</p>
-                            <a class="btn btn-primary" href="booking.html">Schedule with Dr. Rivera</a>
-                        </div>
+                <div class="editorial-overlap">
+                    <div class="editorial-img-wrapper reveal">
+                        <img src="images/doctor-3.png" alt="Dr. Alex Rivera" class="img-editorial" width="600" height="800">
                     </div>
-                </article>
+                    <div class="editorial-content reveal delay-200">
+                        <p class="uppercase-tracking text-accent">Orthodontist & Clear Aligners</p>
+                        <h2 class="text-heading-lg" style="margin-top: 1rem; margin-bottom: 0.5rem;">Dr. Alex Rivera, DMD</h2>
+                        <p class="text-body-sm text-muted uppercase-tracking" style="margin-bottom: 1.5rem;">USC School of Dentistry · 12 Years</p>
+                        <p class="text-body-md text-muted">Dr. Rivera completed his orthodontic residency at the University of Southern California and is one of the top Invisalign providers in the state. He's passionate about working with patients who've been told they're "too old for braces" — proving that it's never too late for a transformative smile.</p>
+                        <ul style="display:flex; flex-wrap:wrap; gap: 1rem; margin-top: 1.5rem; margin-bottom: 2rem;">
+                            <li class="uppercase-tracking" style="padding: 0.5rem 1rem; border: 1px solid var(--color-charcoal); font-size: 0.65rem;">AAO Member</li>
+                            <li class="uppercase-tracking" style="padding: 0.5rem 1rem; border: 1px solid var(--color-charcoal); font-size: 0.65rem;">Invisalign Diamond</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-outline">Schedule with Dr. Rivera</a>
+                    </div>
+                </div>
 
             </div>
         </section>
 
         <!-- CTA -->
-        <aside class="cta-strip">
-            <div class="container">
-                <h2>Your Smile Is in Expert Hands</h2>
-                <p>Book a free consultation with any of our specialists — no obligation, no pressure.</p>
-                <a class="btn btn-primary btn-lg" href="booking.html">Book Free Consultation</a>
+        <section class="section bg-brass" style="text-align: center;">
+            <div class="container reveal">
+                <h2 class="text-heading-lg" style="color: var(--color-alabaster);">Your Smile Is in Expert Hands</h2>
+                <p class="text-body-lg" style="color: rgba(250,249,246,0.9); margin-top: 1rem; margin-bottom: 2rem;">Book a free consultation with any of our specialists — no obligation, no pressure.</p>
+                <a href="booking.html" class="btn btn-outline" style="border-color: var(--color-alabaster); color: var(--color-alabaster);">Book Free Consultation</a>
             </div>
-        </aside>
+        </section>
 
     </main>
 
     <footer id="site-footer" class="footer">
         <div class="container">
-            <div class="footer-bottom" style="border-top:none;padding-top:0;">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="logo" href="index.html" aria-label="TOOTHCARE home">TOOTH<span>CARE</span></a>
+                    <p class="text-body-sm" style="margin-top: 1rem; color: rgba(250,249,246,0.7); max-width: 300px;">Premium dental care meets luxury comfort. California's most trusted cosmetic and general dental studio.</p>
+                </div>
+                <div>
+                    <h4 class="text-body-sm uppercase-tracking" style="color: var(--color-alabaster); margin-bottom: 1rem;">Navigation</h4>
+                    <a href="services.html" class="footer-link">Our Services</a>
+                    <a href="doctors.html" class="footer-link">Meet the Doctors</a>
+                    <a href="gallery.html" class="footer-link">Smile Gallery</a>
+                    <a href="blog.html" class="footer-link">Journal</a>
+                </div>
+                <div>
+                    <h4 class="text-body-sm uppercase-tracking" style="color: var(--color-alabaster); margin-bottom: 1rem;">Contact</h4>
+                    <a href="booking.html" class="footer-link">Book Appointment</a>
+                    <a href="contact.html" class="footer-link">Locations & Hours</a>
+                    <a href="tel:+10000000000" class="footer-link">+1 (000) 000-0000</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
                 <p>© 2026 TOOTHCARE. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Accessibility</a>
-                    <a href="#">HIPAA Notice</a>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#" style="color: inherit;">Privacy Policy</a>
+                    <a href="#" style="color: inherit;">Accessibility</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <style>
-        @media (max-width: 768px) {
-            [style*="grid-template-columns:280px"] {
-                grid-template-columns: 1fr !important;
-            }
-        }
-    </style>
-
     <script src="script.js" defer></script>
 </body>
-
 </html>

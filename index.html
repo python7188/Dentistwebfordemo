@@ -1,301 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DOCTORS — The Specialists</title>
-  <meta name="description" content="DOCTORS — The architects behind your smile. World-class dental specialists." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOOTHCARE | Luxury Editorial Dentistry</title>
+    <meta name="description" content="Premium dental care meets luxury comfort. The architects behind your smile.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
 </head>
 <body>
 
-  <!-- ═══════════════════════ PRELOADER ═══════════════════════ -->
-  <div id="preloader" role="status" aria-label="Loading DOCTORS">
-    <div class="preloader__inner">
-      <svg class="preloader__logo" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="40" cy="40" r="36" stroke="#B58A3E" stroke-width="1.5"/>
-        <path d="M26 50 C26 40 54 40 54 50" stroke="#B58A3E" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="32" cy="33" r="3.5" fill="#B58A3E"/>
-        <circle cx="48" cy="33" r="3.5" fill="#B58A3E"/>
-      </svg>
-      <div class="preloader__bar-wrap" aria-hidden="true">
-        <div class="preloader__bar"></div>
-      </div>
-      <p class="preloader__label">Loading</p>
-    </div>
-  </div>
+    <a class="skip-link" href="#main" style="position:absolute; left:-9999px;">Skip to content</a>
 
-  <!-- ═══════════════════════ PAGE ═══════════════════════ -->
-  <div id="page" class="page" aria-hidden="true">
-
-    <!-- ── LEFT RAIL ── -->
-    <aside class="left-rail" aria-label="Navigation rail">
-      <div class="logo-mark" aria-label="Doctors logo">
-        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="18" cy="18" r="16" stroke="#B58A3E" stroke-width="1.5"/>
-          <path d="M11 22 C11 16 25 16 25 22" stroke="#B58A3E" stroke-width="1.5" stroke-linecap="round"/>
-          <circle cx="14" cy="15" r="2" fill="#B58A3E"/>
-          <circle cx="22" cy="15" r="2" fill="#B58A3E"/>
-        </svg>
-      </div>
-
-      <div class="rail-shimmer" aria-hidden="true">
-        <div class="rail-shimmer__fill"></div>
-      </div>
-
-      <nav class="brush-nav" aria-label="Brush tools">
-        <button class="brush-btn" aria-label="Soft brush" tabindex="0">
-          <svg viewBox="0 0 22 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="8" y="0" width="6" height="30" rx="3" stroke="#B58A3E" stroke-width="1.5"/>
-            <ellipse cx="11" cy="42" rx="6" ry="8" stroke="#B58A3E" stroke-width="1.5"/>
-            <line x1="11" y1="30" x2="11" y2="34" stroke="#B58A3E" stroke-width="1.5"/>
-          </svg>
-          <span class="brush-label">Brush</span>
-        </button>
-        <button class="brush-btn" aria-label="Detail brush" tabindex="0">
-          <svg viewBox="0 0 22 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="9" y="0" width="4" height="32" rx="2" stroke="#B58A3E" stroke-width="1.5"/>
-            <ellipse cx="11" cy="43" rx="4" ry="7" stroke="#B58A3E" stroke-width="1.5"/>
-            <line x1="11" y1="32" x2="11" y2="36" stroke="#B58A3E" stroke-width="1.5"/>
-          </svg>
-          <span class="brush-label">Brush</span>
-        </button>
-      </nav>
-    </aside>
-
-    <!-- ── MAIN ── -->
-    <main id="main-content" class="main-content" tabindex="-1">
-
-      <!-- Top-right brand block -->
-      <header class="site-header" role="banner">
-        <div class="header__brand">
-          <h1 class="brand-title">DOCTORS</h1>
-          <p class="brand-tagline">the architects behind your smile</p>
+    <header id="site-header" class="header">
+        <div class="container header-inner">
+            <a id="logo" class="logo" href="index.html" aria-label="TOOTHCARE home">TOOTH<span>CARE</span></a>
+            <nav id="primary-nav" class="nav" role="navigation" aria-label="Primary Navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Smile Gallery</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a class="btn btn-primary mobile-book-btn" href="booking.html">Book Appointment</a>
+            </nav>
+            <a id="book-btn" class="btn btn-primary" href="booking.html" role="button">Book Appointment</a>
+            <button id="mobile-menu-toggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="hamburger"></span></button>
         </div>
-      </header>
+    </header>
 
-      <!-- ─────────── CARDS SECTION ─────────── -->
-      <section class="cards-section" aria-label="Specialist services">
+    <main id="main">
 
-        <!-- ROW 1: small card top-right -->
-        <div class="cards-row cards-row--1">
-          <article class="card card--sm" data-card="1" tabindex="0" aria-label="General Dentistry — Preventive Care">
-            <div class="card__inner">
-              <div class="card__text-side">
-                <span class="card__tag">General Dentistry</span>
-                <h2 class="card__title">Preventive<br/>Care</h2>
-                <p class="card__desc">Comprehensive check-ups and cleaning routines that keep your smile healthy year-round.</p>
-              </div>
-              <figure class="card__fig">
-                <picture>
-                  <source srcset="assets/img-1.avif" type="image/avif"/>
-                  <source srcset="assets/img-1.webp" type="image/webp"/>
-                  <img class="card__img" src="assets/img-placeholder.svg"
-                    alt="Dental specialist performing a consultation" loading="lazy" width="280" height="200"/>
-                </picture>
-                <figcaption class="sr-only">General dentistry consultation</figcaption>
-              </figure>
+        <!-- Hero Section -->
+        <section class="section section-lg">
+            <div class="container">
+                <div class="editorial-overlap">
+                    <div class="editorial-img-wrapper reveal">
+                        <img src="images/hero.png" alt="A sophisticated and luxurious smile" class="img-editorial" width="800" height="1000">
+                    </div>
+                    <div class="editorial-content reveal delay-200">
+                        <p class="uppercase-tracking text-accent">The Architects Behind Your Smile</p>
+                        <h1 class="text-display-lg" style="margin-top: 1rem; margin-bottom: 2rem;">Editorial Dentistry.</h1>
+                        <p class="text-body-lg text-muted">A distinctively refined approach to cosmetic and restorative dental care. Where precision meets artistry to create your most memorable feature.</p>
+                        <div class="divider"></div>
+                        <a href="booking.html" class="btn btn-primary" style="margin-top: 1rem;">Begin Your Transformation</a>
+                    </div>
+                </div>
             </div>
-            <svg class="card__border-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <rect x="0.75" y="0.75" width="98.5" height="98.5" rx="19.5"
-                fill="none" stroke="#B58A3E" stroke-width="1.5"
-                stroke-dasharray="395" stroke-dashoffset="395" class="border-path"/>
-            </svg>
-          </article>
-        </div>
+        </section>
 
-        <!-- ROW 2: HERO card (large) -->
-        <div class="cards-row cards-row--2">
-          <article class="card card--lg" data-card="2" tabindex="0" aria-label="Featured — Expert Orthodontics">
-            <div class="card__inner">
-              <div class="card__text-side">
-                <span class="card__tag">Featured Specialist</span>
-                <h2 class="card__title">Expert<br/>Orthodontics</h2>
-                <p class="card__desc">World-class orthodontic treatment with the latest technology for perfect alignment and lasting confidence.</p>
-                <a href="#" class="card__cta" aria-label="Book an orthodontics appointment">Book Now</a>
-              </div>
-              <figure class="card__fig">
-                <picture>
-                  <source srcset="assets/img-2.avif" type="image/avif"/>
-                  <source srcset="assets/img-2.webp" type="image/webp"/>
-                  <img class="card__img" src="assets/img-placeholder-lg.svg"
-                    alt="Lead dental specialist smiling in the clinic" loading="lazy" width="500" height="340"/>
-                </picture>
-                <figcaption class="sr-only">Lead specialist in orthodontics</figcaption>
-              </figure>
+        <!-- Statement Section -->
+        <section class="section bg-warm-grey">
+            <div class="container">
+                <div class="grid grid-cols-2 gap-16" style="align-items: center;">
+                    <div class="reveal">
+                        <h2 class="text-heading-lg">Not a clinic.<br>A design studio for your smile.</h2>
+                    </div>
+                    <div class="reveal delay-100">
+                        <p class="text-body-md">We reject the cold, clinical defaults of modern dentistry. At TOOTHCARE, we blend the warmth of a luxury retreat with the exacting standards of board-certified specialists.</p>
+                        <p class="text-body-md">Every veneer, implant, and aligner is custom-designed to match your facial structure, gum line, and natural personality.</p>
+                        <a href="services.html" class="btn btn-outline" style="margin-top: 1.5rem;">Explore Our Services</a>
+                    </div>
+                </div>
             </div>
-            <svg class="card__border-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <rect x="0.75" y="0.75" width="98.5" height="98.5" rx="19.5"
-                fill="none" stroke="#B58A3E" stroke-width="1.5"
-                stroke-dasharray="395" stroke-dashoffset="395" class="border-path"/>
-            </svg>
-          </article>
-        </div>
+        </section>
 
-        <!-- ROW 3: medium card offset-left -->
-        <div class="cards-row cards-row--3">
-          <article class="card card--md" data-card="3" tabindex="0" aria-label="Cosmetic Dentistry — Smile Design">
-            <div class="card__inner">
-              <div class="card__text-side">
-                <span class="card__tag">Cosmetic</span>
-                <h2 class="card__title">Smile<br/>Design</h2>
-                <p class="card__desc">Tailored cosmetic treatments from veneers to whitening, crafted for your unique smile.</p>
-              </div>
-              <figure class="card__fig">
-                <picture>
-                  <source srcset="assets/img-3.avif" type="image/avif"/>
-                  <source srcset="assets/img-3.webp" type="image/webp"/>
-                  <img class="card__img" src="assets/img-placeholder.svg"
-                    alt="Cosmetic dental procedure in progress" loading="lazy" width="280" height="200"/>
-                </picture>
-                <figcaption class="sr-only">Cosmetic smile design procedure</figcaption>
-              </figure>
+        <!-- Services Teaser -->
+        <section class="section">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;" class="reveal">
+                    <p class="uppercase-tracking text-accent">Mastery</p>
+                    <h2 class="text-display-sm">Our Disciplines</h2>
+                    <div class="divider divider-center"></div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-8">
+                    <article class="reveal delay-100">
+                        <img src="images/doctor-1.png" alt="Cosmetic Dentistry" class="img-editorial" style="aspect-ratio: 3/4; width: 100%; margin-bottom: 1.5rem;">
+                        <h3 class="text-heading-sm">Cosmetic Restorations</h3>
+                        <p class="text-body-sm">Porcelain veneers, bonding, and professional whitening tailored to your unique facial geometry.</p>
+                        <a href="services.html#cosmetic" class="text-xs uppercase-tracking" style="border-bottom: 1px solid var(--color-charcoal); padding-bottom: 2px;">Learn More</a>
+                    </article>
+                    <article class="reveal delay-200">
+                        <img src="images/doctor-2.png" alt="Surgical Implants" class="img-editorial" style="aspect-ratio: 3/4; width: 100%; margin-bottom: 1.5rem;">
+                        <h3 class="text-heading-sm">Surgical Implants</h3>
+                        <p class="text-body-sm">Permanent, natural-looking replacements utilizing 3D-guided surgical precision.</p>
+                        <a href="services.html#implants" class="text-xs uppercase-tracking" style="border-bottom: 1px solid var(--color-charcoal); padding-bottom: 2px;">Learn More</a>
+                    </article>
+                    <article class="reveal delay-300">
+                        <img src="images/doctor-3.png" alt="Orthodontics" class="img-editorial" style="aspect-ratio: 3/4; width: 100%; margin-bottom: 1.5rem;">
+                        <h3 class="text-heading-sm">Clear Orthodontics</h3>
+                        <p class="text-body-sm">Discreet alignment solutions designed to perfect your smile without disrupting your life.</p>
+                        <a href="services.html#orthodontics" class="text-xs uppercase-tracking" style="border-bottom: 1px solid var(--color-charcoal); padding-bottom: 2px;">Learn More</a>
+                    </article>
+                </div>
             </div>
-            <svg class="card__border-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <rect x="0.75" y="0.75" width="98.5" height="98.5" rx="19.5"
-                fill="none" stroke="#B58A3E" stroke-width="1.5"
-                stroke-dasharray="395" stroke-dashoffset="395" class="border-path"/>
-            </svg>
-          </article>
-        </div>
+        </section>
 
-        <!-- ROW 4: medium card center -->
-        <div class="cards-row cards-row--4">
-          <article class="card card--md card--offset-right" data-card="4" tabindex="0" aria-label="Implants — Dental Implants">
-            <div class="card__inner">
-              <div class="card__text-side">
-                <span class="card__tag">Implants</span>
-                <h2 class="card__title">Dental<br/>Implants</h2>
-                <p class="card__desc">Permanent, natural-looking replacements that restore both function and aesthetics seamlessly.</p>
-              </div>
-              <figure class="card__fig">
-                <picture>
-                  <source srcset="assets/img-4.avif" type="image/avif"/>
-                  <source srcset="assets/img-4.webp" type="image/webp"/>
-                  <img class="card__img" src="assets/img-placeholder.svg"
-                    alt="Dental implant specialist at work" loading="lazy" width="280" height="200"/>
-                </picture>
-                <figcaption class="sr-only">Dental implant procedure</figcaption>
-              </figure>
+        <!-- Testimonial Carousel -->
+        <section class="section bg-slate">
+            <div class="container">
+                <div class="testimonials reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <p class="uppercase-tracking text-brass">The TOOTHCARE Standard</p>
+                    <div class="carousel" style="margin-top: 3rem;">
+                        <div class="carousel-track">
+                            <div class="testimonial-slide">
+                                <p class="text-heading-md italic" style="color: var(--color-alabaster);">"They didn't just fix my teeth; they engineered a smile that completely changed how I present myself to the world."</p>
+                                <p class="uppercase-tracking" style="margin-top: 2rem; color: var(--color-brass);">— E. Sterling, Los Angeles</p>
+                            </div>
+                            <div class="testimonial-slide">
+                                <p class="text-heading-md italic" style="color: var(--color-alabaster);">"The environment is stunning. It feels less like a medical facility and more like an exclusive private club."</p>
+                                <p class="uppercase-tracking" style="margin-top: 2rem; color: var(--color-brass);">— M. Chen, San Francisco</p>
+                            </div>
+                        </div>
+                        <div class="carousel-indicators">
+                            <button class="carousel-dot active" aria-label="Slide 1"></button>
+                            <button class="carousel-dot" aria-label="Slide 2"></button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <svg class="card__border-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <rect x="0.75" y="0.75" width="98.5" height="98.5" rx="19.5"
-                fill="none" stroke="#B58A3E" stroke-width="1.5"
-                stroke-dasharray="395" stroke-dashoffset="395" class="border-path"/>
-            </svg>
-          </article>
-        </div>
-
-        <!-- ROW 5: two small cards side by side with overlap -->
-        <div class="cards-row cards-row--5">
-          <article class="card card--sm card--overlap-left" data-card="5" tabindex="0" aria-label="Pediatric Dentistry — Kids Care">
-            <div class="card__inner">
-              <div class="card__text-side">
-                <span class="card__tag">Pediatric</span>
-                <h2 class="card__title">Kids<br/>Dentistry</h2>
-                <p class="card__desc">Gentle, fun-focused dental care building healthy habits from childhood.</p>
-              </div>
-              <figure class="card__fig">
-                <picture>
-                  <source srcset="assets/img-5.avif" type="image/avif"/>
-                  <source srcset="assets/img-5.webp" type="image/webp"/>
-                  <img class="card__img" src="assets/img-placeholder.svg"
-                    alt="Pediatric dentist with young patient" loading="lazy" width="200" height="150"/>
-                </picture>
-                <figcaption class="sr-only">Pediatric dental care</figcaption>
-              </figure>
-            </div>
-            <svg class="card__border-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <rect x="0.75" y="0.75" width="98.5" height="98.5" rx="19.5"
-                fill="none" stroke="#B58A3E" stroke-width="1.5"
-                stroke-dasharray="395" stroke-dashoffset="395" class="border-path"/>
-            </svg>
-          </article>
-
-          <article class="card card--sm card--overlap-right" data-card="6" tabindex="0" aria-label="Periodontics — Gum Health">
-            <div class="card__inner">
-              <div class="card__text-side">
-                <span class="card__tag">Periodontics</span>
-                <h2 class="card__title">Gum<br/>Health</h2>
-                <p class="card__desc">Advanced periodontal care protecting the foundation of every beautiful smile.</p>
-              </div>
-              <figure class="card__fig">
-                <picture>
-                  <source srcset="assets/img-6.avif" type="image/avif"/>
-                  <source srcset="assets/img-6.webp" type="image/webp"/>
-                  <img class="card__img" src="assets/img-placeholder.svg"
-                    alt="Periodontics specialist in examination" loading="lazy" width="200" height="150"/>
-                </picture>
-                <figcaption class="sr-only">Periodontic gum care</figcaption>
-              </figure>
-            </div>
-            <svg class="card__border-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <rect x="0.75" y="0.75" width="98.5" height="98.5" rx="19.5"
-                fill="none" stroke="#B58A3E" stroke-width="1.5"
-                stroke-dasharray="395" stroke-dashoffset="395" class="border-path"/>
-            </svg>
-          </article>
-        </div>
-
-        <!-- ROW 6: two small cards + bottom pair -->
-        <div class="cards-row cards-row--6">
-          <article class="card card--sm" data-card="7" tabindex="0" aria-label="Emergency — Urgent Dental Care">
-            <div class="card__inner">
-              <div class="card__text-side">
-                <span class="card__tag">Emergency</span>
-                <h2 class="card__title">Urgent<br/>Care</h2>
-                <p class="card__desc">Same-day emergency appointments for pain relief and urgent dental needs.</p>
-              </div>
-              <figure class="card__fig">
-                <picture>
-                  <source srcset="assets/img-7.avif" type="image/avif"/>
-                  <source srcset="assets/img-7.webp" type="image/webp"/>
-                  <img class="card__img" src="assets/img-placeholder.svg"
-                    alt="Emergency dental care team" loading="lazy" width="200" height="150"/>
-                </picture>
-                <figcaption class="sr-only">Emergency dental care</figcaption>
-              </figure>
-            </div>
-            <svg class="card__border-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <rect x="0.75" y="0.75" width="98.5" height="98.5" rx="19.5"
-                fill="none" stroke="#B58A3E" stroke-width="1.5"
-                stroke-dasharray="395" stroke-dashoffset="395" class="border-path"/>
-            </svg>
-          </article>
-        </div>
-
-      </section>
-
-      <!-- TEETH doodle (bottom-left) -->
-      <div class="teeth-doodle" aria-hidden="true">
-        <svg viewBox="0 0 130 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12,32 Q12,12 28,11 Q33,4 43,9 Q51,2 62,9 Q72,2 82,9 Q92,4 98,11 Q115,12 115,32 Q115,52 98,52 Q92,60 82,54 Q72,60 62,54 Q51,60 43,54 Q33,60 28,52 Q12,52 12,32 Z"
-            stroke="#B58A3E" stroke-width="1.5" fill="rgba(181,138,62,0.05)" stroke-dasharray="5 2.5"/>
-          <line x1="43" y1="11" x2="43" y2="52" stroke="#B58A3E" stroke-width="0.8" opacity="0.45"/>
-          <line x1="62" y1="9" x2="62" y2="54" stroke="#B58A3E" stroke-width="0.8" opacity="0.45"/>
-          <line x1="82" y1="9" x2="82" y2="54" stroke="#B58A3E" stroke-width="0.8" opacity="0.45"/>
-          <text x="63" y="36" text-anchor="middle" font-family="Inter, sans-serif" font-size="9"
-            fill="#B58A3E" letter-spacing="3.5" font-weight="500">TEETH</text>
-        </svg>
-      </div>
+        </section>
 
     </main>
-  </div><!-- /page -->
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer__inner">
-      <p class="footer__copy">&copy; 2025 Doctors Specialists. All rights reserved.</p>
-      <nav class="footer__nav" aria-label="Footer navigation">
-        <a href="#" class="footer__link">Privacy</a>
-        <a href="#" class="footer__link">Terms</a>
-        <a href="#" class="footer__link">Contact</a>
-      </nav>
-    </div>
-  </footer>
+    <footer id="site-footer" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="logo" href="index.html" aria-label="TOOTHCARE home">TOOTH<span>CARE</span></a>
+                    <p class="text-body-sm" style="margin-top: 1rem; color: rgba(250,249,246,0.7); max-width: 300px;">Premium dental care meets luxury comfort. California's most trusted cosmetic and general dental studio.</p>
+                </div>
+                <div>
+                    <h4 class="text-body-sm uppercase-tracking" style="color: var(--color-alabaster); margin-bottom: 1rem;">Navigation</h4>
+                    <a href="services.html" class="footer-link">Our Services</a>
+                    <a href="doctors.html" class="footer-link">Meet the Doctors</a>
+                    <a href="gallery.html" class="footer-link">Smile Gallery</a>
+                    <a href="blog.html" class="footer-link">Journal</a>
+                </div>
+                <div>
+                    <h4 class="text-body-sm uppercase-tracking" style="color: var(--color-alabaster); margin-bottom: 1rem;">Contact</h4>
+                    <a href="booking.html" class="footer-link">Book Appointment</a>
+                    <a href="contact.html" class="footer-link">Locations & Hours</a>
+                    <a href="tel:+10000000000" class="footer-link">+1 (000) 000-0000</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 TOOTHCARE. All rights reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#" style="color: inherit;">Privacy Policy</a>
+                    <a href="#" style="color: inherit;">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <script src="scripts/animations.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog — TOOTHCARE | Dental Health Tips &amp; Treatment Guides</title>
-    <meta name="description"
-        content="Expert dental health advice, treatment guides, and the latest innovations from TOOTHCARE's team of specialists. Read our blog.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    <title>The Journal | Luxury Editorial Dentistry</title>
+    <meta name="description" content="Insights, updates, and expert advice on oral health and cosmetic dentistry from TOOTHCARE.">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
 </head>
-
 <body>
 
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" style="position:absolute; left:-9999px;">Skip to content</a>
 
-    <header id="site-header" class="header scrolled">
-        <div class="header-inner">
+    <header id="site-header" class="header">
+        <div class="container header-inner">
             <a id="logo" class="logo" href="index.html" aria-label="TOOTHCARE home">TOOTH<span>CARE</span></a>
             <nav id="primary-nav" class="nav" role="navigation" aria-label="Primary Navigation">
                 <ul class="nav-list">
@@ -36,120 +27,73 @@
                 <a class="btn btn-primary mobile-book-btn" href="booking.html">Book Appointment</a>
             </nav>
             <a id="book-btn" class="btn btn-primary" href="booking.html" role="button">Book Appointment</a>
-            <button id="mobile-menu-toggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"
-                aria-label="Open menu"><span class="hamburger"></span></button>
+            <button id="mobile-menu-toggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span class="hamburger"></span></button>
         </div>
     </header>
 
-    <main id="main" style="padding-top:100px;">
+    <main id="main">
 
-        <section class="section-pad" style="text-align:center;background:linear-gradient(135deg,#f0f4f8,#faf8f5);">
+        <!-- Page Hero -->
+        <section class="section section-lg bg-warm-grey" style="text-align: center;">
             <div class="container">
-                <span class="section-label">Insights &amp; Education</span>
-                <h1 style="font-family:var(--font-display);font-size:2.75rem;margin-bottom:16px;">Our Blog</h1>
-                <p class="lead" style="max-width:600px;margin:0 auto;">Expert advice, treatment explainers, and oral
-                    health tips from the TOOTHCARE team.</p>
+                <p class="uppercase-tracking text-accent reveal">The Journal</p>
+                <h1 class="text-display-md reveal delay-100" style="margin-top: 1rem; margin-bottom: 2rem;">Thoughts on Modern Dentistry.</h1>
+                <p class="text-body-lg text-muted reveal delay-200" style="max-width: 600px; margin: 0 auto;">Expert insights, patient stories, and the latest advancements in cosmetic and restorative dental care.</p>
+                <div class="divider divider-center reveal delay-300"></div>
             </div>
         </section>
 
-        <section class="section-pad">
+        <!-- Featured Post -->
+        <section class="section" style="padding-bottom: 0;">
             <div class="container">
-                <div class="blog-grid" style="grid-template-columns:1fr;max-width:760px;margin:0 auto;">
+                <div class="editorial-overlap">
+                    <div class="editorial-img-wrapper reveal">
+                        <img src="images/blog-1.jpg" alt="Veneers vs. Bonding" class="img-editorial" width="600" height="800" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'800\' viewBox=\'0 0 600 800\' fill=\'%23f3f2ee\'%3E%3Crect width=\'600\' height=\'800\' fill=\'%23f3f2ee\'/%3E%3C/svg%3E'">
+                    </div>
+                    <div class="editorial-content reveal delay-200">
+                        <p class="uppercase-tracking text-accent">Cosmetic Guide</p>
+                        <h2 class="text-heading-lg" style="margin-top: 1rem; margin-bottom: 1.5rem;">Porcelain Veneers vs. Dental Bonding: Making the Right Choice</h2>
+                        <p class="text-body-md text-muted" style="margin-bottom: 2rem;">When it comes to correcting chips, gaps, or discoloration, both veneers and bonding offer excellent results. But which approach aligns with your long-term aesthetic goals?</p>
+                        <a href="#" class="btn btn-primary">Read the Article</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Blog Post 1 -->
-                    <article class="blog-card reveal" id="blog-post-1"
-                        style="display:grid;grid-template-columns:1fr;gap:0;">
-                        <div class="blog-card-img" style="aspect-ratio:21/9;">
-                            <img src="images/blog-smile.png" alt="Woman with a radiant healthy smile" loading="lazy"
-                                width="760" height="326">
-                        </div>
-                        <div class="blog-card-body" style="padding:32px;">
-                            <span class="blog-tag">Cosmetic Dentistry</span>
-                            <h2 style="font-family:var(--font-display);font-size:1.6rem;margin-bottom:12px;">5 Things to
-                                Know Before Getting Veneers</h2>
-                            <p class="blog-meta" style="margin-bottom:20px;"><time datetime="2026-03-01">March 1,
-                                    2026</time> · By Dr. Jane Doe · 5 min read</p>
-
-                            <p style="color:var(--muted);line-height:1.8;margin-bottom:16px;">Porcelain veneers are one
-                                of the most transformative cosmetic treatments available — but they're also one of the
-                                most misunderstood. Whether you've been thinking about veneers for years or just
-                                discovered them, here are five things every patient should know before committing.</p>
-
-                            <h3 style="margin:20px 0 10px;">1. Veneers Are Not One-Size-Fits-All</h3>
-                            <p style="color:var(--muted);line-height:1.8;margin-bottom:16px;">Every set of veneers is
-                                custom-designed to match your facial structure, gum line, and natural tooth color. Your
-                                dentist will work with you to choose the shape, shade, and translucency that looks most
-                                natural for your unique smile.</p>
-
-                            <h3 style="margin:20px 0 10px;">2. Minimal Tooth Preparation Is Required</h3>
-                            <p style="color:var(--muted);line-height:1.8;margin-bottom:16px;">A thin layer of enamel
-                                (about 0.5mm) is removed to make room for the veneer. This means the process is largely
-                                conservative compared to crowns. Some ultra-thin veneer systems require even less
-                                preparation.</p>
-
-                            <h3 style="margin:20px 0 10px;">3. They're Durable — But Not Indestructible</h3>
-                            <p style="color:var(--muted);line-height:1.8;margin-bottom:16px;">Modern porcelain veneers
-                                can last 10–20 years with proper care. Avoid biting on hard objects (ice, pens,
-                                fingernails) and wear a night guard if you grind your teeth. Treat them like your
-                                natural teeth and they'll reward you.</p>
-
-                            <h3 style="margin:20px 0 10px;">4. The Process Takes About Two Visits</h3>
-                            <p style="color:var(--muted);line-height:1.8;margin-bottom:16px;">The first visit involves
-                                preparation and impressions. Temporary veneers are placed while your permanent ones are
-                                crafted at the lab. The second visit is the exciting part — bonding day, where your new
-                                smile comes to life.</p>
-
-                            <h3 style="margin:20px 0 10px;">5. They Can Fix More Than You Think</h3>
-                            <p style="color:var(--muted);line-height:1.8;margin-bottom:16px;">Veneers can address chips,
-                                gaps, discoloration, minor misalignment, and even worn-down teeth. For many patients,
-                                they eliminate the need for multiple separate treatments.</p>
-
-                            <div
-                                style="margin-top:24px;padding:20px;background:rgba(73,197,182,0.06);border-radius:var(--radius-sm);border-left:4px solid var(--accent-teal);">
-                                <p style="font-size:0.9rem;color:var(--text-dark);"><strong>Ready to explore
-                                        veneers?</strong> Book a free cosmetic consultation at TOOTHCARE. We'll show you
-                                    a digital preview of your new smile before any work begins.</p>
-                                <a class="btn btn-primary btn-sm" href="booking.html" style="margin-top:12px;">Book
-                                    Consultation</a>
-                            </div>
-                        </div>
+        <!-- Post Grid -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-cols-3 gap-8">
+                    <!-- Post 2 -->
+                    <article class="reveal" style="display: flex; flex-direction: column;">
+                        <img src="images/blog-2.jpg" alt="The Science of Sleep Dentistry" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; margin-bottom: 1.5rem;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\' fill=\'%23e5e3dc\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23e5e3dc\'/%3E%3C/svg%3E'">
+                        <p class="uppercase-tracking text-accent" style="font-size: 0.65rem; margin-bottom: 0.5rem;">Patient Comfort</p>
+                        <h3 class="text-heading-sm" style="margin-bottom: 1rem; flex-grow: 1;">The Science of Sleep Dentistry</h3>
+                        <p class="text-body-sm text-muted" style="margin-bottom: 1.5rem;">Overcoming dental anxiety through advanced sedation techniques that turn hours in the chair into a brief, restful nap.</p>
+                        <a href="#" class="text-xs uppercase-tracking" style="border-bottom: 1px solid var(--color-charcoal); padding-bottom: 2px; align-self: flex-start;">Read Article</a>
                     </article>
 
-                    <hr style="border:none;border-top:1px solid rgba(0,0,0,0.06);margin:32px 0;">
-
-                    <!-- Blog Post 2 (summary) -->
-                    <article class="blog-card reveal">
-                        <div class="blog-card-img">
-                            <img src="images/hero.png" alt="Modern dental clinic treatment room" loading="lazy"
-                                width="760" height="428">
-                        </div>
-                        <div class="blog-card-body">
-                            <span class="blog-tag">Preventive Care</span>
-                            <h3><a href="#blog-post-2">The Complete Guide to Adult Dental Cleanings</a></h3>
-                            <p class="blog-excerpt">Regular cleanings do more than polish teeth. Learn how professional
-                                hygiene visits detect problems early, prevent gum disease, and protect your long-term
-                                health.</p>
-                            <p class="blog-meta"><time datetime="2026-02-18">February 18, 2026</time> · By Dr. Michael
-                                Chen · 4 min read</p>
-                        </div>
+                    <!-- Post 3 -->
+                    <article class="reveal delay-100" style="display: flex; flex-direction: column;">
+                        <img src="images/blog-3.jpg" alt="Invisalign in Your 40s" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; margin-bottom: 1.5rem;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\' fill=\'%23f3f2ee\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f3f2ee\'/%3E%3C/svg%3E'">
+                        <p class="uppercase-tracking text-accent" style="font-size: 0.65rem; margin-bottom: 0.5rem;">Orthodontics</p>
+                        <h3 class="text-heading-sm" style="margin-bottom: 1rem; flex-grow: 1;">Invisalign in Your 40s: Why It's Never Too Late</h3>
+                        <p class="text-body-sm text-muted" style="margin-bottom: 1.5rem;">More adults than ever are choosing clear aligners to correct shifting teeth and perfect their smiles.</p>
+                        <a href="#" class="text-xs uppercase-tracking" style="border-bottom: 1px solid var(--color-charcoal); padding-bottom: 2px; align-self: flex-start;">Read Article</a>
                     </article>
 
-                    <!-- Blog Post 3 (summary) -->
-                    <article class="blog-card reveal">
-                        <div class="blog-card-img">
-                            <img src="images/doctor-2.png" alt="Dentist using 3D imaging scanner" loading="lazy"
-                                width="760" height="428">
-                        </div>
-                        <div class="blog-card-body">
-                            <span class="blog-tag">Technology</span>
-                            <h3><a href="#blog-post-3">How 3D Imaging Is Revolutionizing Dental Implants</a></h3>
-                            <p class="blog-excerpt">Discover how cone-beam CT scans and AI-guided surgery are making
-                                implants faster, safer, and more predictable than ever before.</p>
-                            <p class="blog-meta"><time datetime="2026-02-05">February 5, 2026</time> · By Dr. Alex
-                                Rivera · 6 min read</p>
-                        </div>
+                    <!-- Post 4 -->
+                    <article class="reveal delay-200" style="display: flex; flex-direction: column;">
+                        <img src="images/blog-4.jpg" alt="The Link Between Oral Health and Longevity" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; margin-bottom: 1.5rem;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\' fill=\'%23e5e3dc\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23e5e3dc\'/%3E%3C/svg%3E'">
+                        <p class="uppercase-tracking text-accent" style="font-size: 0.65rem; margin-bottom: 0.5rem;">Wellness</p>
+                        <h3 class="text-heading-sm" style="margin-bottom: 1rem; flex-grow: 1;">The Link Between Oral Health and Longevity</h3>
+                        <p class="text-body-sm text-muted" style="margin-bottom: 1.5rem;">How inflammation in your gums can impact cardiovascular health, and what you can do to prevent it.</p>
+                        <a href="#" class="text-xs uppercase-tracking" style="border-bottom: 1px solid var(--color-charcoal); padding-bottom: 2px; align-self: flex-start;">Read Article</a>
                     </article>
-
+                </div>
+                
+                <div style="text-align: center; margin-top: 4rem;">
+                    <button class="btn btn-outline reveal">View Older Posts</button>
                 </div>
             </div>
         </section>
@@ -158,15 +102,35 @@
 
     <footer id="site-footer" class="footer">
         <div class="container">
-            <div class="footer-bottom" style="border-top:none;padding-top:0;">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="logo" href="index.html" aria-label="TOOTHCARE home">TOOTH<span>CARE</span></a>
+                    <p class="text-body-sm" style="margin-top: 1rem; color: rgba(250,249,246,0.7); max-width: 300px;">Premium dental care meets luxury comfort. California's most trusted cosmetic and general dental studio.</p>
+                </div>
+                <div>
+                    <h4 class="text-body-sm uppercase-tracking" style="color: var(--color-alabaster); margin-bottom: 1rem;">Navigation</h4>
+                    <a href="services.html" class="footer-link">Our Services</a>
+                    <a href="doctors.html" class="footer-link">Meet the Doctors</a>
+                    <a href="gallery.html" class="footer-link">Smile Gallery</a>
+                    <a href="blog.html" class="footer-link">Journal</a>
+                </div>
+                <div>
+                    <h4 class="text-body-sm uppercase-tracking" style="color: var(--color-alabaster); margin-bottom: 1rem;">Contact</h4>
+                    <a href="booking.html" class="footer-link">Book Appointment</a>
+                    <a href="contact.html" class="footer-link">Locations & Hours</a>
+                    <a href="tel:+10000000000" class="footer-link">+1 (000) 000-0000</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
                 <p>© 2026 TOOTHCARE. All rights reserved.</p>
-                <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Accessibility</a><a href="#">HIPAA
-                        Notice</a></div>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#" style="color: inherit;">Privacy Policy</a>
+                    <a href="#" style="color: inherit;">Accessibility</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js" defer></script>
 </body>
-
 </html>
