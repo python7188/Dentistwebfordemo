@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
     
     <!-- Lenis CSS for Smooth Scroll -->
     <style>
@@ -59,18 +59,17 @@
     <main id="main">
 
         <!-- Hero Section -->
-        <section class="section section-lg">
-            <div class="container">
-                <div class="editorial-overlap">
-                    <div class="editorial-img-wrapper reveal">
-                        <img src="images/HOME PAGE.jpeg.jpg" alt="A sophisticated and luxurious smile" class="img-editorial" width="800" height="1000">
+        <section class="section hero-section" style="height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; background: var(--color-alabaster);">
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="editorial-overlap" style="display: flex; align-items: center;">
+                    <div class="editorial-content reveal delay-200" style="position: relative; z-index: 3; mix-blend-mode: difference; color: var(--color-alabaster);">
+                        <p class="uppercase-tracking text-brass" style="margin-bottom: 2rem;">The Architects Behind Your Smile</p>
+                        <h1 class="text-display-lg" style="margin-bottom: 2rem; white-space: nowrap; font-size: var(--text-6xl); line-height: 0.9; transform: translateX(-5vw);">Editorial<br>Dentistry.</h1>
+                        <p class="text-body-lg" style="max-width: 400px; color: rgba(255,255,255,0.8);">A distinctively refined approach to cosmetic and restorative dental care.</p>
+                        <a href="booking.html" class="btn btn-primary magnetic" style="margin-top: 3rem; background: var(--color-alabaster); color: var(--color-charcoal); border: none;">Begin Transformation</a>
                     </div>
-                    <div class="editorial-content reveal delay-200">
-                        <p class="uppercase-tracking text-accent">The Architects Behind Your Smile</p>
-                        <h1 class="text-display-lg" style="margin-top: 1rem; margin-bottom: 2rem;">Editorial Dentistry.</h1>
-                        <p class="text-body-lg text-muted">A distinctively refined approach to cosmetic and restorative dental care. Where precision meets artistry to create your most memorable feature.</p>
-                        <div class="divider"></div>
-                        <a href="booking.html" class="btn btn-primary" style="margin-top: 1rem;">Begin Your Transformation</a>
+                    <div class="editorial-img-wrapper reveal" style="position: absolute; right: 0; width: 60%; height: 80vh; z-index: 1;">
+                        <img src="images/HOME PAGE.jpeg.jpg" alt="Luxurious smile" class="img-editorial" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -111,34 +110,35 @@
             </div>
         </section>
 
-        <!-- Services Teaser -->
-        <section class="section">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: 4rem;" class="reveal">
-                    <p class="uppercase-tracking text-accent">Mastery</p>
-                    <h2 class="text-display-sm">Our Disciplines</h2>
-                    <div class="divider divider-center"></div>
+        <!-- Horizontal Scroll Services Section -->
+        <section class="horizontal-scroll-section" style="background: var(--color-charcoal); color: var(--color-alabaster); overflow: hidden; padding: 10vh 0;">
+            <div class="horizontal-scroll-container" style="width: 300vw; display: flex; height: 80vh;">
+                <!-- Intro Panel -->
+                <div class="horizontal-panel" style="width: 100vw; display: flex; flex-direction: column; justify-content: center; padding: 0 10vw;">
+                    <p class="uppercase-tracking text-brass">Mastery</p>
+                    <h2 class="text-display-md" style="color: var(--color-alabaster); font-size: var(--text-5xl);">Our Disciplines.</h2>
                 </div>
-
-                <div class="grid grid-cols-3 gap-8">
-                    <article class="reveal delay-100">
-                        <img src="images/Cosmetic Dentistry.jpeg" alt="Cosmetic Dentistry" class="img-editorial" style="aspect-ratio: 3/4; width: 100%; margin-bottom: 1.5rem; object-fit: cover;">
-                        <h3 class="text-heading-sm">Cosmetic Restorations</h3>
-                        <p class="text-body-sm">Porcelain veneers, bonding, and professional whitening tailored to your unique facial geometry.</p>
-                        <a href="services.html#cosmetic" class="text-xs uppercase-tracking" style="border-bottom: 1px solid var(--color-charcoal); padding-bottom: 2px;">Learn More</a>
-                    </article>
-                    <article class="reveal delay-200">
-                        <img src="images/dental implant.jpeg" alt="Surgical Implants" class="img-editorial" style="aspect-ratio: 3/4; width: 100%; margin-bottom: 1.5rem; object-fit: cover;">
-                        <h3 class="text-heading-sm">Surgical Implants</h3>
-                        <p class="text-body-sm">Permanent, natural-looking replacements utilizing 3D-guided surgical precision.</p>
-                        <a href="services.html#implants" class="text-xs uppercase-tracking" style="border-bottom: 1px solid var(--color-charcoal); padding-bottom: 2px;">Learn More</a>
-                    </article>
-                    <article class="reveal delay-300">
-                        <img src="images/Orthodontics.jpeg" alt="Orthodontics" class="img-editorial" style="aspect-ratio: 3/4; width: 100%; margin-bottom: 1.5rem; object-fit: cover;">
-                        <h3 class="text-heading-sm">Clear Orthodontics</h3>
-                        <p class="text-body-sm">Discreet alignment solutions designed to perfect your smile without disrupting your life.</p>
-                        <a href="services.html#orthodontics" class="text-xs uppercase-tracking" style="border-bottom: 1px solid var(--color-charcoal); padding-bottom: 2px;">Learn More</a>
-                    </article>
+                <!-- Service 1 -->
+                <div class="horizontal-panel" style="width: 100vw; display: flex; align-items: center; justify-content: center; gap: 5vw;">
+                    <div style="width: 40%; height: 60vh;">
+                        <img src="images/Cosmetic Dentistry.jpeg" alt="Cosmetic Dentistry" class="img-editorial" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="width: 40%;">
+                        <h3 class="text-heading-lg" style="color: var(--color-alabaster);">Cosmetic Restorations</h3>
+                        <p class="text-body-md" style="color: rgba(255,255,255,0.7); margin: 2rem 0;">Porcelain veneers, bonding, and professional whitening tailored to your unique facial geometry.</p>
+                        <a href="services.html#cosmetic" class="btn btn-outline" style="border-color: var(--color-brass); color: var(--color-brass);">Explore</a>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="horizontal-panel" style="width: 100vw; display: flex; align-items: center; justify-content: center; gap: 5vw;">
+                    <div style="width: 40%; height: 60vh;">
+                        <img src="images/dental implant.jpeg" alt="Surgical Implants" class="img-editorial" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="width: 40%;">
+                        <h3 class="text-heading-lg" style="color: var(--color-alabaster);">Surgical Implants</h3>
+                        <p class="text-body-md" style="color: rgba(255,255,255,0.7); margin: 2rem 0;">Permanent, natural-looking replacements utilizing 3D-guided surgical precision.</p>
+                        <a href="services.html#implants" class="btn btn-outline" style="border-color: var(--color-brass); color: var(--color-brass);">Explore</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -201,7 +201,8 @@
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js?v=4" defer></script>
+    <script src="wow-script.js?v=4" defer></script>
 
     <!-- Dependencies for WOW Factor -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>

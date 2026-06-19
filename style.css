@@ -4,27 +4,27 @@
   /* Colors */
   --color-alabaster: #FFFFFF;
   --color-warm-grey: #FAFAFA;
-  --color-charcoal: #383024;
+  --color-charcoal: #0A0A0A; /* Pure Onyx Black */
   --color-slate: #F2EFE8;
-  --color-muted: #8C7C61;
-  --color-brass: #D4AF37;
+  --color-muted: #666666; /* Darker grey for better readability */
+  --color-brass: #D4AF37; /* Vibrant Gold */
   --color-brass-light: #E8CC7B;
 
   /* Typography */
   --font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 
-  /* Typography Scale */
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: clamp(1.5rem, 4vw, 2rem);
-  --text-3xl: clamp(2rem, 5vw, 3rem);
-  --text-4xl: clamp(2.5rem, 6vw, 4rem);
-  --text-5xl: clamp(3rem, 8vw, 5rem);
-  --text-6xl: clamp(3.5rem, 10vw, 6.5rem);
+  /* Typography Scale - MASSIVE and BOLD */
+  --text-xs: 0.875rem;
+  --text-sm: 1rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.35rem;
+  --text-xl: 1.75rem;
+  --text-2xl: clamp(2rem, 5vw, 3rem);
+  --text-3xl: clamp(2.5rem, 6vw, 4rem);
+  --text-4xl: clamp(3rem, 8vw, 5rem);
+  --text-5xl: clamp(4rem, 10vw, 7rem);
+  --text-6xl: clamp(5rem, 12vw, 9rem);
 
   /* Spacing */
   --space-2: 0.5rem;
@@ -234,10 +234,12 @@ ul, ol {
 }
 
 .header.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: var(--space-4) 0;
-  border-bottom: 1px solid rgba(26, 26, 26, 0.05);
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .header-inner {
@@ -266,11 +268,13 @@ ul, ol {
 }
 
 .nav-list a {
-  font-size: var(--text-sm);
-  font-weight: 500;
+  font-size: var(--text-base);
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  color: var(--color-charcoal);
   position: relative;
+  padding: var(--space-2) 0;
 }
 
 .nav-list a::after {
